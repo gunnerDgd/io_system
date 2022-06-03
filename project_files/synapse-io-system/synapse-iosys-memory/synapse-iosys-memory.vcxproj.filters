@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\linear">
+      <UniqueIdentifier>{aee6a949-de8f-41c6-90be-11d639202808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\linear\details">
+      <UniqueIdentifier>{73e1ce45-46f5-4fc1-9ff6-c5a7277b56ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\linear">
+      <UniqueIdentifier>{18b8fd19-9227-4e6f-8c23-4e507d0cd6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\linear\details">
+      <UniqueIdentifier>{7e43746e-2276-42bf-8d1e-b7a1f3c463b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\alloc">
+      <UniqueIdentifier>{0e9c494d-0737-458f-abc7-68e7e56274ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\alloc\standard_library">
+      <UniqueIdentifier>{da8f3186-5021-4bf5-8eb3-fb6bf90e3225}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\memory\linear\linear.h">
+      <Filter>Header Files\linear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear.h">
+      <Filter>Header Files\linear\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\standard_library\standard_heap.h">
+      <Filter>Header Files\alloc\standard_library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\alloc_model.h">
+      <Filter>Header Files\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear_manip.h">
+      <Filter>Header Files\linear\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear_alloc.h">
+      <Filter>Header Files\linear\details</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear.c">
+      <Filter>Source Files\linear\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear_manip.c">
+      <Filter>Source Files\linear\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear_alloc.c">
+      <Filter>Source Files\linear\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\linear\linear.c">
+      <Filter>Source Files\linear</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
