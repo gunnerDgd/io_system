@@ -10,9 +10,9 @@ __synapse_iosys_file_caching_uncontinuous_caching_read_from(synapse_iosys_base* 
 	size_t										  sz_read_round    = 0,
 												  sz_read_total	   = 0;
 
-	synapse_iosys_base_pointer_set((*pIoModel->io_entity), pIoModel->io_read_pointer);
-														   pIoModel->io_read_cached_pointer = pIoModel->io_read_pointer;
-														   pIoModel->io_read_cached		    = pReadSize;
+	synapse_iosys_base_pointer_set((*pIoBase), pIoModel->io_read_pointer);
+											   pIoModel->io_read_cached_pointer = pIoModel->io_read_pointer;
+											   pIoModel->io_read_cached		    = pReadSize;
 
 	if (ptr_rdcache->total_size(ptr_rdcache->mmodel.entity) < pReadSize)
 		ptr_rdcache->allocate  (ptr_rdcache->mmodel.entity, pReadSize);

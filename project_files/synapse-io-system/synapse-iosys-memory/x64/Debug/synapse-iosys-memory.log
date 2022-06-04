@@ -1,5 +1,2 @@
-﻿  iosys_standard_aligned_heap.c
-  standard_aligned_heap.c
-  standard_heap.c
-  Generating Code...
+﻿  iosys_memory_linear_manip.c
   synapse-iosys-memory.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-memory.lib

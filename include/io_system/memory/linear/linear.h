@@ -35,6 +35,9 @@ synapse_iosys_memory_linear_iterate(void*);
 synapse_iosys_uncontinuous_memory_model_node*
 synapse_iosys_memory_linear_iterate_next(void*, synapse_iosys_uncontinuous_memory_model_node*);
 
+synapse_iosys_uncontinuous_memory_model_node*
+synapse_iosys_memory_linear_iterate_at  (void*, size_t);
+
 size_t
 synapse_iosys_memory_linear_copy_from(void*, void*, size_t, size_t);
 

@@ -29,14 +29,14 @@ __synapse_iosys_memory_linear_copy_from(__synapse_iosys_memory_linear* pMmodel, 
 	pReadMemory += ptr_seek->node.node_size - (pReadPointer % pMmodel->alloc_block_size);
 				   ptr_seek = ptr_seek->next;
 
-	for(			  ;
-		pReadSize > 0 ;
+	for(										 ;
+		ptr_seek && pReadSize > 0				 ;
 		pReadSize   -= pMmodel ->alloc_block_size,
 		pReadMemory += pMmodel ->alloc_block_size,
 		ptr_seek     = ptr_seek->next)
 		memcpy(ptr_seek->node.node_ptr, pReadMemory, (pReadSize > pMmodel->alloc_block_size) 
-																		? pMmodel->alloc_block_size 
-																		: pReadSize);
+																? pMmodel->alloc_block_size 
+																: pReadSize);
 
 	return pReadSize;
 }
@@ -56,8 +56,8 @@ __synapse_iosys_memory_linear_copy_to(__synapse_iosys_memory_linear* pMmodel, ui
 	pWriteMemory += ptr_seek->node.node_size - (pWritePointer % pMmodel->alloc_block_size);
 					ptr_seek = ptr_seek->next;
 
-	for(__synapse_iosys_memory_linear_node* ptr_seek = pMmodel->entry			  ;
-											pWriteSize > 0						  ;
+	for(__synapse_iosys_memory_linear_node* ptr_seek = pMmodel->entry				  ;
+											ptr_seek && pWriteSize > 0				  ;
 											pWriteSize   -= pMmodel ->alloc_block_size,
 											pWriteMemory += pMmodel ->alloc_block_size,
 											ptr_seek     = ptr_seek->next)

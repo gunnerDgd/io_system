@@ -12,6 +12,7 @@ synapse_io_system_memory_standard_heap_initialize()
 	ptr_alloc->allocate   = &__synapse_iosys_memory_standard_heap_allocate  ;
 	ptr_alloc->deallocate = &__synapse_iosys_memory_standard_heap_deallocate;
 	ptr_alloc->resize     = &__synapse_iosys_memory_standard_heap_resize    ;
+	ptr_alloc->entity	  = NULL;
 
 	return ptr_alloc;
 }

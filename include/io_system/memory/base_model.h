@@ -13,4 +13,4 @@ typedef struct synapse_iosys_memory_model
 	pMmodel.copy_from(pMmodel.entity, pReadPointer, pReadSize, pReadFilePointer);
 
 #define synapse_iosys_memory_model_copy_to(pMmodel, pWritePointer, pWriteSize, pWriteFilePointer)\
-	pMmodel.copy_from(pMmodel.entity, pWritePointer, pWriteSize, pWriteFilePointer);
+	pMmodel.copy_to  (pMmodel.entity, pWritePointer, pWriteSize, pWriteFilePointer);

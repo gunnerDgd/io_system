@@ -13,6 +13,7 @@ synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_memo
 	synapse_iosys_uncontinuous_memory_model* ptr_mmodel
 		= synapse_io_system_memory_alloc_model_allocate((*pAlloc), NULL, sizeof(synapse_iosys_uncontinuous_memory_model));
 
+	ptr_mmodel->allocate		 = &synapse_iosys_memory_linear_allocate	  ;
 	ptr_mmodel->allocate_back    = &synapse_iosys_memory_linear_allocate_back ;
 	ptr_mmodel->allocate_front   = &synapse_iosys_memory_linear_allocate_front;
 
@@ -22,6 +23,7 @@ synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_memo
 
 	ptr_mmodel->iterate			 = &synapse_iosys_memory_linear_iterate		;
 	ptr_mmodel->iterate_next	 = &synapse_iosys_memory_linear_iterate_next;
+	ptr_mmodel->iterate_at		 = &synapse_iosys_memory_linear_iterate_at  ;
 
 	ptr_mmodel->total_size		 = &synapse_iosys_memory_linear_total_size  ;
 	ptr_mmodel->mmodel.copy_from = &synapse_iosys_memory_linear_copy_from   ;
@@ -85,6 +87,12 @@ synapse_iosys_uncontinuous_memory_model_node*
 synapse_iosys_memory_linear_iterate_next(void* pEntity, synapse_iosys_uncontinuous_memory_model_node* pNode)
 {
 	return __synapse_iosys_memory_linear_iterate_next(pNode);
+}
+
+synapse_iosys_uncontinuous_memory_model_node*
+synapse_iosys_memory_linear_iterate_at(void* pEntity, size_t pPointer)
+{
+	return __synapse_iosys_memory_linear_seek(pEntity, pPointer);
 }
 
 size_t

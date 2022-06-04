@@ -12,7 +12,7 @@ synapse_iosys_file_caching_uncontinuous_initialize(synapse_iosys_base*						pIoB
 		= malloc(sizeof(synapse_iosys_cached_base));
 
 	ptr_cache_base->base_io_system		 = pIoBase;
-	ptr_cache_base->cache_entity		 = __synapse_iosys_file_caching_uncontinuous_initialize(pIoBase, pIoReadBuffer, pIoWriteBuffer);
+	ptr_cache_base->cache_entity		 = __synapse_iosys_file_caching_uncontinuous_initialize(pIoReadBuffer, pIoWriteBuffer);
 	
 	ptr_cache_base->cached_read			 = &synapse_iosys_file_caching_uncontinuous_read_from		 ;
 	ptr_cache_base->cached_read_reserve  = &synapse_iosys_file_caching_uncontinuous_read_from_reserve;
@@ -24,7 +24,10 @@ synapse_iosys_file_caching_uncontinuous_initialize(synapse_iosys_base*						pIoB
 }
 
 void
-synapse_iosys_file_caching_uncontinuous_cleanup(synapse_iosys_cached_base*);
+synapse_iosys_file_caching_uncontinuous_cleanup(synapse_iosys_cached_base* pEntity)
+{
+	__synapse_iosys_file_caching_uncontinuous_cleanup(pEntity->base_io_system, pEntity->cache_entity);
+}
 
 size_t
 synapse_iosys_file_caching_uncontinuous_read_from(synapse_iosys_cached_base* pEntity, void* pReadBuffer, size_t pReadSize)

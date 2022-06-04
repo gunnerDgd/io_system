@@ -138,7 +138,7 @@
       <Filter>Source Files\alloc\standard_library</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\memory\alloc\standard_library\standard_aligned_heap.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\alloc\standard_library</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
