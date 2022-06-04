@@ -1,5 +1,5 @@
 #pragma once
-#include <io_system/memory/model.h>
+#include <io_system/memory/uncontinuous_model.h>
 #include <io_system/memory/alloc/alloc_model.h>
 
 typedef struct __synapse_iosys_memory_linear_node
@@ -22,10 +22,10 @@ typedef struct __synapse_iosys_memory_linear
 } __synapse_iosys_memory_linear;
 
 __synapse_iosys_memory_linear*
-__synapse_iosys_memory_linear_initialize	  (size_t, synapse_io_system_memory_alloc_model*);
+__synapse_iosys_memory_linear_initialize(size_t, synapse_io_system_memory_alloc_model*);
 
 void
-__synapse_iosys_memory_linear_cleanup		  (__synapse_iosys_memory_linear*);
+__synapse_iosys_memory_linear_cleanup	(__synapse_iosys_memory_linear*);
 
 size_t
-__synapse_iosys_memory_linear_total_size	  (__synapse_iosys_memory_linear*);
+__synapse_iosys_memory_linear_total_size(__synapse_iosys_memory_linear*);

@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\interface\base.h" />
+    <ClInclude Include="..\..\..\include\io_system\interface\cached_base.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -75,6 +76,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-io-system\include;$(IncludePath)</IncludePath>
+    <OutDir>E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

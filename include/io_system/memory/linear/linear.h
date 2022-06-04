@@ -1,5 +1,5 @@
 #pragma once
-#include <io_system/memory/model.h>
+#include <io_system/memory/uncontinuous_model.h>
 #include <io_system/memory/alloc/alloc_model.h>
 
 synapse_iosys_uncontinuous_memory_model* 
@@ -36,7 +36,7 @@ synapse_iosys_uncontinuous_memory_model_node*
 synapse_iosys_memory_linear_iterate_next(void*, synapse_iosys_uncontinuous_memory_model_node*);
 
 size_t
-synapse_iosys_memory_linear_copy_from(void*, void*, size_t);
+synapse_iosys_memory_linear_copy_from(void*, void*, size_t, size_t);
 
 size_t
-synapse_iosys_memory_linear_copy_to  (void*, void*, size_t);
+synapse_iosys_memory_linear_copy_to  (void*, void*, size_t, size_t);

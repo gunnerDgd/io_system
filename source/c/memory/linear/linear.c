@@ -88,13 +88,13 @@ synapse_iosys_memory_linear_iterate_next(void* pEntity, synapse_iosys_uncontinuo
 }
 
 size_t
-synapse_iosys_memory_linear_copy_from(void* pEntity, void* pReadMemory, size_t pReadSize)
+synapse_iosys_memory_linear_copy_from(void* pEntity, void* pReadMemory, size_t pReadSize, size_t pReadPointer)
 {
-	return __synapse_iosys_memory_linear_copy_from(pEntity, pReadMemory, pReadSize);
+	return __synapse_iosys_memory_linear_copy_from(pEntity, pReadMemory, pReadSize, pReadPointer);
 }
 
 size_t
-synapse_iosys_memory_linear_copy_to(void* pEntity, void* pWriteMemory, size_t pWriteSize)
+synapse_iosys_memory_linear_copy_to(void* pEntity, void* pWriteMemory, size_t pWriteSize, size_t pWritePointer)
 {
-	return __synapse_iosys_memory_linear_copy_to(pEntity, pWriteMemory, pWriteSize);
+	return __synapse_iosys_memory_linear_copy_to(pEntity, pWriteMemory, pWriteSize, pWritePointer);
 }

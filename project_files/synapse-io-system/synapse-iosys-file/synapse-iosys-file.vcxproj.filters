@@ -13,21 +13,69 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\details">
+      <UniqueIdentifier>{6d757c87-8c6c-4d9c-9b43-5a5aaf1a52ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details">
+      <UniqueIdentifier>{4e7eadef-f068-4dd5-92ae-c3ab222db8f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\caching">
+      <UniqueIdentifier>{3a86e8e0-da34-408b-be5e-11ede5cb51cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native">
+      <UniqueIdentifier>{526c03cb-b4fb-4cf7-b45e-f91240370aad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native">
+      <UniqueIdentifier>{98e05922-a260-464c-b6fd-4b5e99cb7b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native">
+      <UniqueIdentifier>{52d00661-6061-40f6-98a3-77d9c4309707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native">
+      <UniqueIdentifier>{939c29c6-ccb8-4f41-b5b6-1b4647bbfdfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\caching">
+      <UniqueIdentifier>{4de76e25-e3aa-46ab-a040-5b13f444eb0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\caching">
+      <UniqueIdentifier>{db4fc3a5-1b29-4647-96c6-1ce5e16338f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\caching">
+      <UniqueIdentifier>{6882ba5f-3bda-4ad1-bbae-c0ab5986a8c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="..\..\..\source\c\file\details\iosys_file_uncontinuous.c">
+      <Filter>Source Files\details\caching</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\iosys_file_uncontinuous_cache.c">
+      <Filter>Source Files\details\caching</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native.c">
+      <Filter>Source Files\details\native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\native.c">
+      <Filter>Source Files\native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\caching\uncontinuous.c">
+      <Filter>Source Files\caching</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="synapse-iosys-file.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="..\..\..\include\io_system\file\details\caching\iosys_file_caching_uncontinuous.h">
+      <Filter>Header Files\details\caching</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native.h">
+      <Filter>Header Files\details\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native_option.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\caching\uncontinuous.h">
+      <Filter>Header Files\caching</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

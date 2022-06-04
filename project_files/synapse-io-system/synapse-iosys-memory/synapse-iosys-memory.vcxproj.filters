@@ -31,12 +31,42 @@
     <Filter Include="Header Files\alloc\standard_library">
       <UniqueIdentifier>{da8f3186-5021-4bf5-8eb3-fb6bf90e3225}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\alloc\system_paging">
+      <UniqueIdentifier>{2939189b-05af-4183-9d80-f5c8c6aead7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\alloc\details">
+      <UniqueIdentifier>{2b065877-9c41-4777-8e1b-b19d83051a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\alloc\details\system_paging">
+      <UniqueIdentifier>{db687ce0-8132-4c06-9eee-fad7f047df80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\alloc\details\standard_library">
+      <UniqueIdentifier>{8c051932-7257-43ef-8650-136d594f11da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc">
+      <UniqueIdentifier>{c6505af0-6797-4176-b55b-3ef854a2483a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc\details">
+      <UniqueIdentifier>{e0291f93-8f62-4577-9058-54dfbc249e6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc\details\system_paging">
+      <UniqueIdentifier>{51b7fd1c-fea0-46b0-a3d6-65e7a2d20fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc\system_paging">
+      <UniqueIdentifier>{788306c9-56bc-4ee3-b136-a9a4a057df87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc\details\standard_heap">
+      <UniqueIdentifier>{38d6df66-793d-45aa-9326-7eded75adecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alloc\standard_library">
+      <UniqueIdentifier>{eb7d35b2-110b-4488-ba43-97de1f2831d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\memory\linear\linear.h">
       <Filter>Header Files\linear</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\memory\model.h">
+    <ClInclude Include="..\..\..\include\io_system\memory\base_model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear.h">
@@ -54,6 +84,30 @@
     <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear_alloc.h">
       <Filter>Header Files\linear\details</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\system_paging\system_paging.h">
+      <Filter>Header Files\alloc\system_paging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\system_paging\iosys_memory_system_paging.h">
+      <Filter>Header Files\alloc\details\system_paging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\system_paging\system_paging_type.h">
+      <Filter>Header Files\alloc\system_paging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\continuous_model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\uncontinuous_model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\standard_library\standard_aligned_heap.h">
+      <Filter>Header Files\alloc\standard_library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\standard_library\iosys_memory_standard_heap.h">
+      <Filter>Header Files\alloc\details\standard_library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\standard_library\iosys_memory_standard_aligned_heap.h">
+      <Filter>Header Files\alloc\details\standard_library</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear.c">
@@ -67,6 +121,24 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\memory\linear\linear.c">
       <Filter>Source Files\linear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\system_paging\iosys_memory_system_paging.c">
+      <Filter>Source Files\alloc\details\system_paging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\system_paging\system_paging.c">
+      <Filter>Source Files\alloc\system_paging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\standard_heap\iosys_standard_aligned_heap.c">
+      <Filter>Source Files\alloc\details\standard_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\standard_heap\iosys_standard_heap.c">
+      <Filter>Source Files\alloc\details\standard_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\standard_library\standard_heap.c">
+      <Filter>Source Files\alloc\standard_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\standard_library\standard_aligned_heap.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

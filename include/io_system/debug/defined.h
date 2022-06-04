@@ -1,0 +1,3 @@
+#pragma once
+#define SYNAPSE_IOSYS_DEBUG_MODE
+#define SYNAPSE_IOSYS_PROFILE_MODE

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\debug">
+      <UniqueIdentifier>{eb1b7118-bb0d-4843-bf66-0ab7b4aee0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\debug\profile">
+      <UniqueIdentifier>{fc02d7a6-4b50-49df-8efd-f34c5ef210dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\debug">
+      <UniqueIdentifier>{a84482a5-628e-485a-81b4-49e5a91c0d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\debug\profile">
+      <UniqueIdentifier>{d3600ca3-18f6-4038-89c6-a9b74ae250dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\debug\message">
+      <UniqueIdentifier>{e2903ad5-4bb6-40f5-b8eb-69529b7ee4da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\debug\message\default.h">
+      <Filter>Header Files\debug\message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\debug\defined.h">
+      <Filter>Header Files\debug</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

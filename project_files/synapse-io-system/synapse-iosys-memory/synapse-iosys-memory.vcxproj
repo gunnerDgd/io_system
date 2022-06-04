@@ -20,14 +20,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\memory\alloc\alloc_model.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\standard_library\iosys_memory_standard_aligned_heap.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\standard_library\iosys_memory_standard_heap.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\details\system_paging\iosys_memory_system_paging.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\standard_library\standard_aligned_heap.h" />
     <ClInclude Include="..\..\..\include\io_system\memory\alloc\standard_library\standard_heap.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\system_paging\system_paging.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\alloc\system_paging\system_paging_type.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\continuous_model.h" />
     <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear.h" />
     <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear_alloc.h" />
     <ClInclude Include="..\..\..\include\io_system\memory\linear\details\iosys_memory_linear_manip.h" />
     <ClInclude Include="..\..\..\include\io_system\memory\linear\linear.h" />
-    <ClInclude Include="..\..\..\include\io_system\memory\model.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\base_model.h" />
+    <ClInclude Include="..\..\..\include\io_system\memory\uncontinuous_model.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\standard_heap\iosys_standard_aligned_heap.c" />
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\standard_heap\iosys_standard_heap.c" />
+    <ClCompile Include="..\..\..\source\c\memory\alloc\details\system_paging\iosys_memory_system_paging.c" />
+    <ClCompile Include="..\..\..\source\c\memory\alloc\standard_library\standard_aligned_heap.c" />
+    <ClCompile Include="..\..\..\source\c\memory\alloc\standard_library\standard_heap.c" />
+    <ClCompile Include="..\..\..\source\c\memory\alloc\system_paging\system_paging.c" />
     <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear.c" />
     <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear_alloc.c" />
     <ClCompile Include="..\..\..\source\c\memory\linear\details\iosys_memory_linear_manip.c" />

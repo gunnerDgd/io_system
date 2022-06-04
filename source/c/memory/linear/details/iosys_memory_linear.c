@@ -1,6 +1,8 @@
 #include <io_system/memory/linear/details/iosys_memory_linear.h>
 #include <stdlib.h>
 
+#include <io_system/debug/message/default.h>
+
 __synapse_iosys_memory_linear*
 __synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_memory_alloc_model* pAllocModel)
 {
@@ -18,6 +20,13 @@ __synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_me
 		= pBlockSize;
 
 	ptr_linear->backmost = ptr_linear->entry;
+
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::entry"			  , ptr_linear->entry)			 ;
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::alloc_model"	  , ptr_linear->alloc_model)	 ;
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::alloc_block_size", ptr_linear->alloc_block_size);
+
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_ptr"  , ptr_linear->entry->node.node_ptr) ;
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_size" , ptr_linear->entry->node.node_size);
 
 	return ptr_linear;
 }
