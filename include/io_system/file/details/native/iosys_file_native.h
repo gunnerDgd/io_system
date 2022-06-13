@@ -1,14 +1,5 @@
 #pragma once
-#include <Windows.h>
-
-#include <stdint.h>
-#include <io_system/file/native/native_option.h>
-
-typedef struct __synapse_iosys_file_native
-{
-	HANDLE hnd_file;
-	size_t ptr_file;
-} __synapse_iosys_file_native;
+#include <io_system/file/details/native/iosys_file_native_type.h>
 
 __synapse_iosys_file_native*
 __synapse_iosys_file_native_initialize_open_existing(const char*);

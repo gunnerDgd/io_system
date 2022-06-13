@@ -1,15 +1,11 @@
-﻿  iosys_file_uncontinuous_cache.c
-  iosys_file_native.c
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(15,2): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'HANDLE'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(15,2): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'HANDLE'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(16,2): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(16,2): message : consider using '%zx' in the format string
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(28,2): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'HANDLE'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(28,2): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'HANDLE'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(29,2): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(29,2): message : consider using '%zx' in the format string
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(46,61): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native.c(58,62): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-  native.c
+﻿  uncontinuous.c
+  iosys_file_uncontinuous.c
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(57,2): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(57,2): message : consider using '%zx' in the format string
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(61,3): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'void *'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(61,3): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'void *'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(66,6): warning C4477: 'printf' : format string '%08x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\iosys_file_uncontinuous.c(66,6): message : consider using '%zx' in the format string
+  iosys_file_uncontinuous_cache.c
   Generating Code...
   synapse-iosys-file.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-file.lib

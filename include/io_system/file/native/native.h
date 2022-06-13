@@ -6,10 +6,10 @@ synapse_iosys_base*
 synapse_iosys_file_native_initialize_open_existing(const char*);
 
 synapse_iosys_base*
-synapse_iosys_file_native_initialize_create_new  (const char*);
+synapse_iosys_file_native_initialize_create_new   (const char*);
 
 void
-synapse_iosys_file_native_cleanup		   (synapse_iosys_base*);
+synapse_iosys_file_native_cleanup				  (synapse_iosys_base*);
 
 size_t
 synapse_iosys_file_native_read_from(void*, void*, size_t);

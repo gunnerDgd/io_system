@@ -1,4 +1,9 @@
 #pragma once
+#include <stdint.h>
 
-#define SYNAPSE_IOSYS_FILE_NATIVE_CREATE_NEW    0
-#define SYNAPSE_IOSYS_FILE_NATIVE_OPEN_EXISTING 1
+typedef enum synapse_iosys_file_access_mode 
+{ 
+	read_only  = 1, 
+	write_only = (1 << 1), 
+	all		   = (1 << 2) 
+} synapse_iosys_file_access_mode;

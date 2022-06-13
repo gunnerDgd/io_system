@@ -26,8 +26,9 @@ __synapse_iosys_file_caching_uncontinuous_caching_read_from(synapse_iosys_base* 
 		if (sz_read_round < ptr_rdcache_node->node_size) // End of File Reached.
 			return sz_read_total;
 
-		pReadSize     -= ptr_rdcache_node->node_size;
-		sz_read_total += sz_read_round;
+		pIoModel->io_read_pointer += sz_read_round;
+		sz_read_total			  += sz_read_round;
+		pReadSize				  -= ptr_rdcache_node->node_size;
 	}
 
 	return sz_read_total;
@@ -44,13 +45,14 @@ __synapse_iosys_file_caching_uncontinuous_caching_write_to(synapse_iosys_base* p
 			   ?			   synapse_iosys_uncontinuous_memory_model_total_size((*ptr_wrcache))
 			   :			   pWriteSize;
 
-	for ( ; pWriteSize 
+	for ( ; ptr_wrcache_node && pWriteSize 
 		  ; ptr_wrcache_node = ptr_wrcache->iterate_next(ptr_wrcache->mmodel.entity, ptr_wrcache_node))
 	{
 		sz_write_round = 
 			synapse_iosys_base_write_to((*pIoBase), ptr_wrcache_node->node_ptr, ptr_wrcache_node->node_size);
 		
-		pWriteSize -= ptr_wrcache_node->node_size;
+		pWriteSize				   -= ptr_wrcache_node->node_size;
+		pIoModel->io_write_pointer += ptr_wrcache_node->node_size;
 	}
 
 	return pWriteSize;

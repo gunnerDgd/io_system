@@ -10,9 +10,9 @@ tstcase_synapse_iosys_file_native_open()
 	return synapse_iosys_file_native_initialize_create_new("test.txt");
 }
 
-void tstcase_synapse_iosys_file_native_write_to(synapse_iosys_base* pIoSys)
+void tstcase_synapse_iosys_file_native_write_to(synapse_iosys_cached_base* pIoSys)
 {
-	synapse_iosys_base_write_to((*pIoSys), "Hello World", 11);
+	synapse_iosys_file_caching_uncontinuous_cleanup(pIoSys);
 }
 
 synapse_iosys_cached_base*

@@ -14,10 +14,15 @@ __synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_me
 	ptr_linear->alloc_model		 = pAllocModel;
 	ptr_linear->alloc_block_size = pBlockSize ;
 
-	ptr_linear->entry->node.node_ptr 
+	ptr_linear->entry->node_pointer 
 		= synapse_io_system_memory_alloc_model_allocate((*pAllocModel), NULL, pBlockSize);
-	ptr_linear->entry->node.node_size
+	ptr_linear->entry->node_size
 		= pBlockSize;
+	ptr_linear->entry->node_ptr
+		= 0;
+
+	ptr_linear->entry->prev = NULL;
+	ptr_linear->entry->next = NULL;
 
 	ptr_linear->backmost = ptr_linear->entry;
 
@@ -25,8 +30,9 @@ __synapse_iosys_memory_linear_initialize(size_t pBlockSize, synapse_io_system_me
 	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::alloc_model"	  , ptr_linear->alloc_model)	 ;
 	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::alloc_block_size", ptr_linear->alloc_block_size);
 
-	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_ptr"  , ptr_linear->entry->node.node_ptr) ;
-	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_size" , ptr_linear->entry->node.node_size);
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_ptr"     , ptr_linear->entry->node_ptr)    ;
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_size"    , ptr_linear->entry->node_size)   ;
+	synapse_iosys_debug_message_value("synapse-iosys-memory::iosys_memory_linear", __FUNCTION__, "__synapse_iosys_memory_linear::node::node_pointer" , ptr_linear->entry->node_pointer);
 
 	return ptr_linear;
 }

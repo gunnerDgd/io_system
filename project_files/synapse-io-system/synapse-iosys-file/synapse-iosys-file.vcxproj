@@ -19,16 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\c\file\caching\uncontinuous.c" />
-    <ClCompile Include="..\..\..\source\c\file\details\iosys_file_uncontinuous.c" />
-    <ClCompile Include="..\..\..\source\c\file\details\iosys_file_uncontinuous_cache.c" />
     <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_init.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_manip.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\io_system\file\caching\uncontinuous.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\details\caching\iosys_file_caching_uncontinuous.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_type.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_init.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_manip.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\file_io_system.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_option.h" />
   </ItemGroup>

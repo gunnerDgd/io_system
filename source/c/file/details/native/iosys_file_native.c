@@ -10,12 +10,7 @@ __synapse_iosys_file_native_initialize_open_existing(const char* pName)
 {
 	__synapse_iosys_file_native* ptr_iosys			 = malloc(sizeof(__synapse_iosys_file_native));
 								 ptr_iosys->hnd_file = CreateFileA(pName, GENERIC_ALL, 0, 0, OPEN_EXISTING, 0, 0);
-								 ptr_iosys->ptr_file = 0;
-
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "ptr_iosys->hnd_file", ptr_iosys->hnd_file);
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "ptr_iosys->ptr_file", ptr_iosys->ptr_file);
-
-	return ptr_iosys;
+	return						 ptr_iosys;
 }
 
 __synapse_iosys_file_native*
@@ -23,12 +18,7 @@ __synapse_iosys_file_native_initialize_create_new(const char* pName)
 {
 	__synapse_iosys_file_native* ptr_iosys			 = malloc(sizeof(__synapse_iosys_file_native));
 								 ptr_iosys->hnd_file = CreateFileA(pName, GENERIC_ALL, 0, 0, CREATE_NEW, 0, 0);
-								 ptr_iosys->ptr_file = 0;
-
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "ptr_iosys->hnd_file", ptr_iosys->hnd_file);
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "ptr_iosys->ptr_file", ptr_iosys->ptr_file);
-
-	return ptr_iosys;
+	return						 ptr_iosys;
 }
 
 
@@ -45,9 +35,6 @@ __synapse_iosys_file_native_read_from(__synapse_iosys_file_native* pNative, uint
 	DWORD sz_rdfrom = 0;
 	BOOL  sz_rdres  = ReadFile(pNative->hnd_file, pReadBuffer, pReadSize, &sz_rdfrom, 0);
 
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "[READ_BYTES]"	, sz_rdfrom);
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "[ERROR_MESSAGE]", GetLastError());
-
 	return (sz_rdres) ? sz_rdfrom : 0;
 }
 
@@ -56,9 +43,6 @@ __synapse_iosys_file_native_write_to(__synapse_iosys_file_native* pNative, uint8
 {
 	DWORD sz_wrto  = 0;
 	BOOL  sz_wrres = WriteFile(pNative->hnd_file, pWriteBuffer, pWriteSize, &sz_wrto, 0);
-
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "[WRITTEN_BYTES]", sz_wrto);
-	synapse_iosys_debug_message_value("__synapse_iosys_file_native", __FUNCTION__, "[ERROR_MESSAGE]", GetLastError());
 
 	return (sz_wrres) ? sz_wrto : 0;
 }

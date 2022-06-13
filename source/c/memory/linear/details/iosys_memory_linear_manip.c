@@ -6,9 +6,9 @@ __synapse_iosys_memory_linear_seek(__synapse_iosys_memory_linear* pMmodel, size_
 {
 	__synapse_iosys_memory_linear_node* ptr_seek = pMmodel->entry;
 
-	for(size_t sz_seeked = 0									  ;
-			   sz_seeked +  ptr_seek->node.node_size < pSeekPointer;
-			   sz_seeked += ptr_seek->node.node_size, ptr_seek = ptr_seek->next);
+	for(size_t sz_seeked = 0								  ;
+			   sz_seeked +  ptr_seek->node_size < pSeekPointer;
+			   sz_seeked += ptr_seek->node_size, ptr_seek = ptr_seek->next);
 
 	return ptr_seek;
 }
@@ -21,9 +21,11 @@ __synapse_iosys_memory_linear_copy_from(__synapse_iosys_memory_linear* pMmodel, 
 			  ?  pReadSize + pReadPointer
 			  :  pMmodel->total_size;
 
-	memcpy(ptr_seek->node.node_ptr  + (pReadPointer % pMmodel->alloc_block_size), 
+	size_t tmp_sz_off_first_copy = (pReadPointer % pMmodel->alloc_block_size);
+
+	memcpy(ptr_seek->node_ptr  + ptr_seek->node_pointer + tmp_sz_off_first_copy, 
 									   pReadMemory							   ,
-		   ptr_seek->node.node_size - (pReadPointer % pMmodel->alloc_block_size));
+		   ptr_seek->node_size - (pReadPointer % pMmodel->alloc_block_size));
 
 	pReadSize   -= ptr_seek->node.node_size - (pReadPointer % pMmodel->alloc_block_size);
 	pReadMemory += ptr_seek->node.node_size - (pReadPointer % pMmodel->alloc_block_size);
@@ -31,12 +33,17 @@ __synapse_iosys_memory_linear_copy_from(__synapse_iosys_memory_linear* pMmodel, 
 
 	for(										 ;
 		ptr_seek && pReadSize > 0				 ;
-		pReadSize   -= pMmodel ->alloc_block_size,
-		pReadMemory += pMmodel ->alloc_block_size,
+		pReadSize   -= (pMmodel ->alloc_block_size - ptr_seek->node_pointer),
+		pReadMemory += (pMmodel ->alloc_block_size - ptr_seek->node_pointer),
 		ptr_seek     = ptr_seek->next)
-		memcpy(ptr_seek->node.node_ptr, pReadMemory, (pReadSize > pMmodel->alloc_block_size) 
-																? pMmodel->alloc_block_size 
-																: pReadSize);
+	{
+		memcpy(ptr_seek->node.node_ptr + ptr_seek->node_pointer, 
+			   pReadMemory, (pReadSize > (pMmodel->alloc_block_size - ptr_seek->node_pointer)) 
+									   ? (pMmodel->alloc_block_size - ptr_seek->node_pointer)
+									   :  pReadSize);
+
+		ptr_seek->node_pointer += (pMmodel->alloc_block_size - ptr_seek->node_pointer);
+	}
 
 	return pReadSize;
 }
@@ -49,21 +56,22 @@ __synapse_iosys_memory_linear_copy_to(__synapse_iosys_memory_linear* pMmodel, ui
 			   ?  pWriteSize 
 			   :  pMmodel->total_size;
 
-	memcpy(pWriteMemory, ptr_seek->node.node_ptr + (pWritePointer % pMmodel->alloc_block_size),
-							     ptr_seek->node.node_size - (pWritePointer % pMmodel->alloc_block_size));
+	memcpy(pWriteMemory, ptr_seek->node.node_ptr  + (pWritePointer % pMmodel->alloc_block_size),
+						 ptr_seek->node.node_size - (pWritePointer % pMmodel->alloc_block_size));
 
 	pWriteSize   -= ptr_seek->node.node_size - (pWritePointer % pMmodel->alloc_block_size);
 	pWriteMemory += ptr_seek->node.node_size - (pWritePointer % pMmodel->alloc_block_size);
 					ptr_seek = ptr_seek->next;
 
-	for(__synapse_iosys_memory_linear_node* ptr_seek = pMmodel->entry				  ;
-											ptr_seek && pWriteSize > 0				  ;
-											pWriteSize   -= pMmodel ->alloc_block_size,
-											pWriteMemory += pMmodel ->alloc_block_size,
-											ptr_seek     = ptr_seek->next)
-		memcpy(pWriteMemory, ptr_seek->node.node_ptr, (pWriteSize > pMmodel->alloc_block_size)
-																		  ? pMmodel->alloc_block_size 
-																		  : pWriteSize);
+	for(__synapse_iosys_memory_linear_node* ptr_seek = pMmodel->entry			  ;
+											ptr_seek && pWriteSize > 0			  ;
+
+											pWriteSize   -= ptr_seek->node_pointer,
+											pWriteMemory += ptr_seek->node_pointer,
+											ptr_seek      = ptr_seek->next)
+		memcpy(pWriteMemory, ptr_seek->node.node_ptr, (pWriteSize > ptr_seek->node_pointer)
+																  ? ptr_seek->node_pointer 
+																  : pWriteSize);
 
 	return pWriteSize;
 }
