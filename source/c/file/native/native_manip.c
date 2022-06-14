@@ -14,3 +14,9 @@ synapse_iosys_file_native_pointer_set(synapse_io_system_file_handle pEntity, siz
 {
 	return __synapse_iosys_file_native_pointer_set(pEntity.opaque, pNewPointer);
 }
+
+void
+synapse_iosys_file_native_wait_until(synapse_io_system_file_handle pHandle)
+{
+	__synapse_iosys_file_native_wait_until(pHandle.opaque);
+}

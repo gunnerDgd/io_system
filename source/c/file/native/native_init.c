@@ -17,6 +17,7 @@ synapse_iosys_file_native_initialize_open_existing(const wchar_t* pName)
 
 							ptr_iosys_base->current_pointer  = &synapse_iosys_file_native_pointer_current ;
 							ptr_iosys_base->move_pointer     = &synapse_iosys_file_native_pointer_set     ;
+							ptr_iosys_base->wait_until		 = &synapse_iosys_file_native_wait_until	  ;
 
 	return ptr_iosys_base;
 }
@@ -35,6 +36,7 @@ synapse_iosys_file_native_initialize_create_new(const wchar_t* pName)
 
 							ptr_iosys_base->current_pointer  = &synapse_iosys_file_native_pointer_current ;
 							ptr_iosys_base->move_pointer     = &synapse_iosys_file_native_pointer_set     ;
+							ptr_iosys_base->wait_until		 = &synapse_iosys_file_native_wait_until	  ;
 
 	return ptr_iosys_base;
 }

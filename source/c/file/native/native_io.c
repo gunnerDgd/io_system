@@ -15,13 +15,13 @@ synapse_iosys_file_native_write_to(synapse_io_system_file_handle pEntity, void* 
 }
 
 size_t
-synapse_iosys_file_native_read_from_vector(synapse_io_system_file_handle pFile, synapse_io_system_file_vector pVector, size_t pVectorOffset)
+synapse_iosys_file_native_read_from_vector(synapse_io_system_file_handle pFile, synapse_io_system_file_vector* pVector, size_t pVectorOffset)
 {
-	return __synapse_iosys_file_native_vector_read_from(pFile.opaque, pVector.handle.opaque, pVectorOffset);
+	return __synapse_iosys_file_native_vector_read_from(pFile.opaque, pVector->handle.opaque, pVectorOffset);
 }
 
 size_t
-synapse_iosys_file_native_write_to_vector(synapse_io_system_file_handle pFile, synapse_io_system_file_vector pVector, size_t pVectorOffset)
+synapse_iosys_file_native_write_to_vector(synapse_io_system_file_handle pFile, synapse_io_system_file_vector* pVector, size_t pVectorOffset)
 {
-	return __synapse_iosys_file_native_vector_write_to (pFile.opaque, pVector.handle.opaque, pVectorOffset);
+	return __synapse_iosys_file_native_vector_write_to (pFile.opaque, pVector->handle.opaque, pVectorOffset);
 }

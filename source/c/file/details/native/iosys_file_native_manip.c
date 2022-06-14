@@ -22,3 +22,9 @@ __synapse_iosys_file_native_pointer_set(__synapse_iosys_file_native* pNative, si
 
 	return ptr_size.QuadPart;
 }
+
+void
+__synapse_iosys_file_native_wait_until(__synapse_iosys_file_native* pNative)
+{
+	WaitForSingleObject(pNative->hnd_aio.hEvent, INFINITE);
+}

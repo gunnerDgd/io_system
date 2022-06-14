@@ -37,8 +37,11 @@
     <Filter Include="Source Files\details\native\vectorized_io">
       <UniqueIdentifier>{c38f5e04-44ba-4816-a016-6527e2b6f908}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\native\vectorized_io">
+      <UniqueIdentifier>{846af4d3-334d-40c8-8090-92aa004a3735}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\native\vectorized_io">
-      <UniqueIdentifier>{7f08ff3d-0232-489f-b501-1a22a9c03b49}</UniqueIdentifier>
+      <UniqueIdentifier>{4a4b0965-0bba-4574-a223-6446529bf64b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +71,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\file\native\native_io.c">
       <Filter>Source Files\native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_init.c">
+      <Filter>Source Files\native\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_manip.c">
+      <Filter>Source Files\native\vectorized_io</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +118,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_init.h">
       <Filter>Header Files\details\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_init.h">
+      <Filter>Header Files\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_manip.h">
+      <Filter>Header Files\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_io.h">
+      <Filter>Header Files\native\vectorized_io</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

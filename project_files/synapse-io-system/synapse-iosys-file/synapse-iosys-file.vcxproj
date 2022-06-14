@@ -28,6 +28,8 @@
     <ClCompile Include="..\..\..\source\c\file\native\native_manip.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native_init.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native_io.c" />
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_init.c" />
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_manip.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_manip.h" />
@@ -43,6 +45,9 @@
     <ClInclude Include="..\..\..\include\io_system\file\native\native_init.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_io.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_manip.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_init.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_io.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_manip.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

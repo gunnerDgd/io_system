@@ -17,6 +17,11 @@ __synapse_iosys_file_native_vector_initialize(size_t pVecCount)
 void
 __synapse_iosys_file_native_vector_cleanup(__synapse_iosys_file_native_vector* pVector)
 {
+	for(size_t cnt_cleanup = 0 ;
+			   cnt_cleanup < pVector->cnt_occupied_vector;
+			   cnt_cleanup)
+		VirtualFree(pVector->ptr_vector[cnt_cleanup].Buffer, 0, MEM_RELEASE);
+
 	free(pVector->ptr_vector);
 	free(pVector);
 }
