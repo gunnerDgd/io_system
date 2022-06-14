@@ -37,11 +37,11 @@ typedef struct synapse_io_system_file
 	size_t(*move_pointer)	 (synapse_io_system_file_handle, size_t);
 } synapse_io_system_file;
 
-#define synapse_io_system_file_read_from(pFile, pIoPtr, pIoSize)\
-	pFile.read_from(pFile.handle, pIoPtr, pIoSize)
+#define synapse_io_system_file_read_from(pFile, pIoPtr, pIoSize, pIoOffset)\
+	pFile.read_from(pFile.handle, pIoPtr, pIoSize, pIoOffset)
 
-#define synapse_io_system_file_write_to(pFile, pIoPtr, pIoSize)\
-	pFile.write_to(pFile.handle, pIoPtr, pIoSize)
+#define synapse_io_system_file_write_to(pFile, pIoPtr, pIoSize, pIoOffset)\
+	pFile.write_to(pFile.handle, pIoPtr, pIoSize, pIoOffset)
 
 #define synapse_io_system_file_read_from_vector(pFile, pIoVec, pIoSize)\
 	pFile.read_from_vector(pFile.handle, pIoVec, pIoSize)

@@ -101,14 +101,14 @@
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_io.h">
       <Filter>Header Files\details\native</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_init.h">
-      <Filter>Header Files\details</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_manip.h">
       <Filter>Header Files\details\native</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_io.h">
       <Filter>Header Files\details\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_init.h">
+      <Filter>Header Files\details\native</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

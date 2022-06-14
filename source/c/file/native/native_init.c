@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 synapse_io_system_file*
-synapse_iosys_file_native_initialize_open_existing(const char* pName)
+synapse_iosys_file_native_initialize_open_existing(const wchar_t* pName)
 {
 	synapse_io_system_file* ptr_iosys_base					 = malloc(sizeof(synapse_io_system_file));
 							ptr_iosys_base->handle.opaque    = __synapse_iosys_file_native_initialize_open_existing(pName);
@@ -22,7 +22,7 @@ synapse_iosys_file_native_initialize_open_existing(const char* pName)
 }
 
 synapse_io_system_file*
-synapse_iosys_file_native_initialize_create_new(const char* pName)
+synapse_iosys_file_native_initialize_create_new(const wchar_t* pName)
 {
 	synapse_io_system_file* ptr_iosys_base					 = malloc(sizeof(synapse_io_system_file));
 							ptr_iosys_base->handle.opaque	 = __synapse_iosys_file_native_initialize_create_new(pName);
