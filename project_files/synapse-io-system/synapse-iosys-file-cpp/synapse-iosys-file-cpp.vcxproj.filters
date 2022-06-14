@@ -19,6 +19,9 @@
     <Filter Include="Header Files\native\cpp">
       <UniqueIdentifier>{ea79ef49-611c-4c4e-b0ac-4bd337068475}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cpp">
+      <UniqueIdentifier>{df612150-95c3-4b8e-8d23-7cbd94dc307c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_openmode.hpp">
@@ -30,5 +33,25 @@
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_declare.hpp">
       <Filter>Header Files\native\cpp</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_nonvec_raw.hpp">
+      <Filter>Header Files\native\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_vectorized.hpp">
+      <Filter>Header Files\native\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_io_vector.hpp">
+      <Filter>Header Files\native\cpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\cpp\file\native\native_nonvec_raw.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\cpp\file\native\native_io_vector.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\cpp\file\native\native_vectorized.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

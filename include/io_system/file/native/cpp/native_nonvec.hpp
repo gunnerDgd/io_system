@@ -21,12 +21,11 @@ namespace io_system::file {
 		using value_type		 = std::remove_all_extents_t<CharT>;
 		using reference			 = value_type&;
 		using pointer			 = value_type*;
+
+		using const_reference    = const value_type&;
+		using const_pointer		 = const value_type*;
 		
 	public:
-		template <typename AnyOption>
-		native(std::wstring, AnyOption&&)    
-			{ static_assert(false, "[io_system::file::native][Critical] Invalid Creation Parameter"); }
-		
 		native (std::wstring, __open_existing);
 		native (std::wstring, __create_new)   ;
 
@@ -42,13 +41,13 @@ namespace io_system::file {
 			read_from(pointer  , size_type);
 
 		size_type
-			write_to (pointer  , size_type, difference_type);
+			write_to (const_pointer, size_type, difference_type);
 		size_type
-			write_to (reference, size_type, difference_type);
+			write_to (const_reference, difference_type);
 		size_type
-			write_to (pointer  , size_type);
+			write_to (const_pointer, size_type);
 		size_type
-			write_to (reference, size_type);
+			write_to (const_reference);
 
 	private:
 		native_handle_type
@@ -91,7 +90,7 @@ typename io_system::file::native<CharT>::size_type
 		 io_system::file::native<CharT>::read_from(pointer pRead, size_type pReadSize, difference_type pReadOffset)
 {
 	return
-		synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize, pReadOffset);
+		synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize * sizeof(value_type), pReadOffset);
 }
 
 template <typename CharT>
@@ -110,7 +109,7 @@ typename io_system::file::native<CharT>::size_type
 		 io_system::file::native<CharT>::read_from(pointer pRead, size_type pReadSize)
 {
 	size_t rd_size
-		= synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize, __M_iosys_file_native_offset);
+		= synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize * sizeof(value_type), __M_iosys_file_native_offset);
 
 	__M_iosys_file_native_offset += rd_size;
 	return							rd_size;
@@ -118,38 +117,38 @@ typename io_system::file::native<CharT>::size_type
 
 template <typename CharT>
 typename io_system::file::native<CharT>::size_type
-		 io_system::file::native<CharT>::write_to(reference pWrite, size_type pWriteSize, difference_type pWriteOffset)
+		 io_system::file::native<CharT>::write_to(const_reference pWrite, difference_type pWriteOffset)
 {
 	return
-		synapse_io_system_file_write_to(__M_iosys_file_native, &pWrite, pWriteSize, pWriteOffset);
+		synapse_io_system_file_write_to(__M_iosys_file_native, &pWrite, sizeof(value_type), pWriteOffset);
 }
 
 template <typename CharT>
 typename io_system::file::native<CharT>::size_type
-		 io_system::file::native<CharT>::read_from(pointer pRead, size_type pReadSize, difference_type pReadOffset)
+		 io_system::file::native<CharT>::write_to(const_pointer pWrite, size_type pWriteSize, difference_type pWriteOffset)
 {
 	return
-		synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize, pReadOffset);
+		synapse_io_system_file_write_to(__M_iosys_file_native, pWrite, pWriteSize * sizeof(value_type), pWriteOffset);
 }
 
 template <typename CharT>
 typename io_system::file::native<CharT>::size_type
-		 io_system::file::native<CharT>::read_from(reference pRead, size_type pReadSize)
+		 io_system::file::native<CharT>::write_to(const_reference pWrite)
 {
-	size_t rd_size
-		= synapse_io_system_file_read_from(__M_iosys_file_native, &pRead, pReadSize, __M_iosys_file_native_offset);
+	size_t wr_size
+		= synapse_io_system_file_write_to(__M_iosys_file_native, &pWrite, sizeof(value_type), __M_iosys_file_native_offset);
 
-	__M_iosys_file_native_offset += rd_size;
-	return							rd_size;
+	__M_iosys_file_native_offset += wr_size;
+	return							wr_size;
 }
 
 template <typename CharT>
 typename io_system::file::native<CharT>::size_type
-		 io_system::file::native<CharT>::read_from(pointer pRead, size_type pReadSize)
+		 io_system::file::native<CharT>::write_to(const_pointer pWrite, size_type pWriteSize)
 {
-	size_t rd_size
-		= synapse_io_system_file_read_from(__M_iosys_file_native, pRead, pReadSize, __M_iosys_file_native_offset);
+	size_t wr_size
+		= synapse_io_system_file_write_to(__M_iosys_file_native, pWrite, pWriteSize * sizeof(value_type), __M_iosys_file_native_offset);
 
-	__M_iosys_file_native_offset += rd_size;
-	return							rd_size;
+	__M_iosys_file_native_offset += wr_size;
+	return							wr_size;
 }
