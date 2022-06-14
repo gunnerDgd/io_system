@@ -8,7 +8,7 @@ __synapse_iosys_file_native_vector_push(__synapse_iosys_file_native_vector* pVec
 		return NULL;
 
 	pVector->ptr_vector[pVector->cnt_occupied_vector].Buffer 
-		= VirtualAlloc(NULL, pVecCount * 4096, MEM_COMMIT, PAGE_READWRITE);
+		= VirtualAlloc(NULL, pVecCount * 4096 * 4, MEM_COMMIT, PAGE_READWRITE);
 
 	return pVector->ptr_vector[pVector->cnt_occupied_vector++].Buffer;
 }

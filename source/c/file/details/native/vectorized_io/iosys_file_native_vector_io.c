@@ -1,5 +1,4 @@
 #include <io_system/file/details/native/vectorized_io/iosys_file_native_vector_io.h>
-#include <stdio.h>
 
 size_t
 __synapse_iosys_file_native_vector_read_from(__synapse_iosys_file_native* pFile, __synapse_iosys_file_native_vector* pVector, size_t pVectorOffset)
@@ -13,8 +12,6 @@ __synapse_iosys_file_native_vector_read_from(__synapse_iosys_file_native* pFile,
 	res_vecio = ReadFileScatter(pFile  ->hnd_file,
 	 							pVector->ptr_vector, 
 							    pVector->cnt_occupied_vector * 4096, 0, &pFile->hnd_aio);
-
-	printf("%d\n", GetLastError());
 
 	GetOverlappedResult(pFile->hnd_file,
 					   &pFile->hnd_aio ,
@@ -35,8 +32,6 @@ __synapse_iosys_file_native_vector_write_to(__synapse_iosys_file_native* pFile, 
 	res_vecio = WriteFileGather(pFile  ->hnd_file,
 							    pVector->ptr_vector, 
 								pVector->cnt_occupied_vector * 4096, 0, &pFile->hnd_aio);
-
-	printf("%d\n", GetLastError());
 
 	GetOverlappedResult(pFile->hnd_file,
 					   &pFile->hnd_aio ,
