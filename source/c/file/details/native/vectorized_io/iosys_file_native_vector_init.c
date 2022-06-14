@@ -8,8 +8,9 @@ __synapse_iosys_file_native_vector_initialize(size_t pVecCount)
 
 	ptr_vector->cnt_vector			= pVecCount;
 	ptr_vector->cnt_occupied_vector = 0		   ;
-	ptr_vector->ptr_vector			= malloc(sizeof(FILE_SEGMENT_ELEMENT) * pVecCount);
+	ptr_vector->ptr_vector			= malloc(sizeof(FILE_SEGMENT_ELEMENT) * (pVecCount + 1));
 
+	memset(ptr_vector->ptr_vector, 0x00, sizeof(FILE_SEGMENT_ELEMENT) * (pVecCount + 1));
 	return ptr_vector;
 }
 

@@ -16,10 +16,30 @@
     <Filter Include="Header Files\details">
       <UniqueIdentifier>{cc589bdc-82df-44ff-86cd-2a5947e338cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\details">
+      <UniqueIdentifier>{d026e6e3-07fb-491c-8021-dec39f0c811b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_type.h">
       <Filter>Header Files\details</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_io_type.h">
+      <Filter>Header Files\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_init.h">
+      <Filter>Header Files\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_execution.h">
+      <Filter>Header Files\details</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_init.c">
+      <Filter>Source Files\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_execution.c">
+      <Filter>Source Files\details</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

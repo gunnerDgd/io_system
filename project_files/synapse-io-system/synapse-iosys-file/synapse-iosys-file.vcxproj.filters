@@ -37,9 +37,15 @@
     <Filter Include="Source Files\details\native\vectorized_io">
       <UniqueIdentifier>{c38f5e04-44ba-4816-a016-6527e2b6f908}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\native\vectorized_io">
+      <UniqueIdentifier>{7f08ff3d-0232-489f-b501-1a22a9c03b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native\vectorized_io">
+      <UniqueIdentifier>{0a5ed612-9ef0-4d74-85d4-533b87cb437f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native.c">
+    <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_manip.c">
       <Filter>Source Files\details\native</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\file\native\native.c">
@@ -51,15 +57,18 @@
     <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_manip.c">
       <Filter>Source Files\details\native\vectorized_io</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_io.c">
+      <Filter>Source Files\details\native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_init.c">
+      <Filter>Source Files\details\native</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native.h">
       <Filter>Header Files\details\native</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\native\native.h">
-      <Filter>Header Files\native</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\file\native\native_option.h">
       <Filter>Header Files\native</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\file_io_system.h">
@@ -73,6 +82,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_manip.h">
       <Filter>Header Files\details\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native_init.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native_io.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native_manip.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
