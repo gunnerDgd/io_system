@@ -21,12 +21,17 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_execution.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_init.h" />
+    <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_io_request.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_io_type.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_execution.c" />
     <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_init.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_io_request.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_io_request_init.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\executor\vectorized_io\iosys_fexec_io_request_vectorized.c" />
+    <ClCompile Include="..\..\..\source\c\file\details\executor\vectorized_io\iosys_fexec_io_request_vectorized_init.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

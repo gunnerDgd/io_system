@@ -3,7 +3,8 @@
 
 typedef struct __synapse_iosys_file_native
 {
-	HANDLE hnd_file;
+	HANDLE     hnd_file;
+	OVERLAPPED hnd_aio ;
 } __synapse_iosys_file_native;
 
 typedef struct __synapse_iosys_file_native_vector

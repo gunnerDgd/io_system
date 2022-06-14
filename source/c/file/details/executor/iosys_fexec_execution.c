@@ -1,25 +1,29 @@
 #include <io_system/file/details/executor/iosys_fexec_execution.h>
 
-void
-__synapse_iosys_fexec_run_once(__synapse_iosys_fexec* pExec)
+bool
+__synapse_iosys_fexec_run_once(__synapse_iosys_fexec* pExecRead)
 {
-	synapse_context_default_entity ptr_exec
-		= synapse_structure_linear_queue_node_data(
-			synapse_structure_linear_queue_node
-		)
+	synapse_structure_linear_queue_node ptr_node_exec
+		= synapse_structure_linear_queue_retrieve_front(pExecRead->fexec_queue);
+
+	__synapse_iosys_fexec_io_request*	ptr_req
+		= synapse_structure_linear_queue_node_data(ptr_node_exec);
+
+		ptr_req->io_exec_pointer(ptr_req);
+	if (ptr_req->io_exec_completed) {
+		synapse_structure_linear_queue_pop_front(pExecRead->fexec_queue, ptr_node_exec);
+		
+		return true;
+	}
+	else
+		synapse_structure_lqueue_push_back_node (pExecRead->fexec_queue, ptr_node_exec);
 }
 
 void
-__synapse_iosys_fexec_run_until_complete(__synapse_iosys_fexec*);
+__synapse_iosys_fexec_run_until_complete(__synapse_iosys_fexec* pExecRead)
+{
+
+}
 
 void
-__synapse_iosys_fexec_io_read_request(__synapse_iosys_fexec*, __synapse_iosys_fexec_req_read*);
-
-void
-__synapse_iosys_fexec_io_read_vec_request(__synapse_iosys_fexec*, __synapse_iosys_fexec_req_read_vec*);
-
-void
-__synapse_iosys_fexec_io_write_request(__synapse_iosys_fexec*, __synapse_iosys_fexec_req_write*);
-
-void
-__synapse_iosys_fexec_io_write_vec_request(__synapse_iosys_fexec*, __synapse_iosys_fexec_req_write_vec*);
+__synapse_iosys_fexec_run_n_count(__synapse_iosys_fexec*, size_t);

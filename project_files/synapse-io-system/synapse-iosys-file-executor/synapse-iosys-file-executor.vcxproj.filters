@@ -19,6 +19,9 @@
     <Filter Include="Source Files\details">
       <UniqueIdentifier>{d026e6e3-07fb-491c-8021-dec39f0c811b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\details\vectorized_io">
+      <UniqueIdentifier>{0b77452d-0299-4327-9216-10035da17e68}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_type.h">
@@ -33,12 +36,27 @@
     <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_execution.h">
       <Filter>Header Files\details</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\executor\iosys_fexec_io_request.h">
+      <Filter>Header Files\details</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_init.c">
       <Filter>Source Files\details</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_execution.c">
+      <Filter>Source Files\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_io_request_init.c">
+      <Filter>Source Files\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\vectorized_io\iosys_fexec_io_request_vectorized.c">
+      <Filter>Source Files\details\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\vectorized_io\iosys_fexec_io_request_vectorized_init.c">
+      <Filter>Source Files\details\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\executor\iosys_fexec_io_request.c">
       <Filter>Source Files\details</Filter>
     </ClCompile>
   </ItemGroup>

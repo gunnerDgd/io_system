@@ -8,6 +8,5 @@
 typedef struct __synapse_iosys_fexec
 {
 	synapse_context_default_entity fexec_context;
-	synapse_structure_linear_queue fexec_rdqueue,
-								   fexec_wrqueue;
+	synapse_structure_linear_queue fexec_queue  ;
 } __synapse_iosys_fexec;

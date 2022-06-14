@@ -10,8 +10,7 @@ __synapse_iosys_fexec_initialize(synapse_context_default_entity pContext)
 		= malloc(sizeof(__synapse_iosys_fexec));
 
 	ptr_fexec->fexec_context = pContext;
-	ptr_fexec->fexec_rdqueue = synapse_structure_linear_queue_initialize_default();
-	ptr_fexec->fexec_wrqueue = synapse_structure_linear_queue_initialize_default();
+	ptr_fexec->fexec_queue	 = synapse_structure_linear_queue_initialize();
 
 	return ptr_fexec;
 }
@@ -19,17 +18,12 @@ __synapse_iosys_fexec_initialize(synapse_context_default_entity pContext)
 __synapse_iosys_fexec*
 __synapse_iosys_fexec_initialize_default()
 {
-	synapse_context_default_entity ptr_fexec_context
-		= synapse_context_default_initialize();
-
-	return __synapse_iosys_fexec_initialize(ptr_fexec_context);
+	return __synapse_iosys_fexec_initialize(synapse_context_default_initialize());
 }
 
 void
-__synapse_iosys_fexec_cleanup(__synapse_iosys_fexec* pExec)
+__synapse_iosys_fexec_cleanup(__synapse_iosys_fexec* pContext)
 {
-	synapse_structure_linear_queue_cleanup(pExec->fexec_rdqueue);
-	synapse_structure_linear_queue_cleanup(pExec->fexec_wrqueue);
-
-	free(pExec);
+	synapse_structure_linear_queue_cleanup(pContext->fexec_queue);
+	free(pContext);
 }
