@@ -24,7 +24,7 @@ typename io_system::file::native_vectorized::size_type
 		= synapse_io_system_file_vectorized_read_from(
 				__M_iosys_file_vectorized,
 				pVector.__M_iovec_handle,
-				pVector.count()
+				__M_iosys_file_vectorized_offset
 		);
 
 	__M_iosys_file_vectorized_offset += sz_read;
@@ -34,10 +34,34 @@ typename io_system::file::native_vectorized::size_type
 typename io_system::file::native_vectorized::size_type
 		 io_system::file::native_vectorized::read_from(reference pReadVector, difference_type pReadOffset)
 {
-
+	return
+		synapse_io_system_file_vectorized_read_from(
+			__M_iosys_file_vectorized,
+			pReadVector.__M_iovec_handle,
+			pReadOffset
+		);
 }
 
-size_type
-write_to(reference);
-size_type
-write_to(reference, difference_type);
+typename io_system::file::native_vectorized::size_type
+		 io_system::file::native_vectorized::write_to(reference pWriteVector)
+{
+	size_t sz_write
+		= synapse_io_system_file_vectorized_write_to(
+			__M_iosys_file_vectorized,
+			pWriteVector.__M_iovec_handle,
+			__M_iosys_file_vectorized_offset
+		);
+
+	__M_iosys_file_vectorized_offset += sz_write;
+	return								sz_write;
+}
+
+typename io_system::file::native_vectorized::size_type
+		 io_system::file::native_vectorized::write_to(reference pWriteVector, difference_type pWriteOffset)
+{
+	return synapse_io_system_file_vectorized_write_to(
+		__M_iosys_file_vectorized,
+		pWriteVector.__M_iovec_handle,
+		pWriteOffset
+	);
+}

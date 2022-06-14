@@ -1,2 +1,5 @@
-﻿  native_nonvec_raw.cpp
+﻿  native_io_vector.cpp
+  native_nonvec_raw.cpp
+  native_vectorized.cpp
+  Generating Code...
   synapse-iosys-file-cpp.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-file-cpp.lib
