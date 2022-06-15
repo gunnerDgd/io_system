@@ -1,3 +1,0 @@
-﻿  iosys_fexec_init.c
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\executor\iosys_fexec_init.c(7,65): warning C4028: formal parameter 1 different from declaration
-  synapse-iosys-file-executor.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-file-executor.lib

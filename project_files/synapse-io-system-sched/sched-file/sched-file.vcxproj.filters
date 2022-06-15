@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\file">
+      <UniqueIdentifier>{1eddb7b2-6682-46c8-9133-6303ed04a8e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\file\details">
+      <UniqueIdentifier>{98c73304-8dd0-4572-b108-7a705d0c9aa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\file\details\system_sched">
+      <UniqueIdentifier>{2c63b194-a5ea-4e7a-97b6-799bf9780e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file">
+      <UniqueIdentifier>{905bcfe3-0c4e-4749-a614-5f2ad98ebc5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file\details">
+      <UniqueIdentifier>{1cc745b6-152a-4e2e-8d01-4c1aaab5cf29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file\details\system_sched">
+      <UniqueIdentifier>{1ba41315-8b92-4b59-a233-adf3d7c4ae17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h">
+      <Filter>Header Files\file\details\system_sched</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_init.h">
+      <Filter>Header Files\file\details\system_sched</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_request.h">
+      <Filter>Header Files\file\details\system_sched</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c">
+      <Filter>Source Files\file\details\system_sched</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_request.c">
+      <Filter>Source Files\file\details\system_sched</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
