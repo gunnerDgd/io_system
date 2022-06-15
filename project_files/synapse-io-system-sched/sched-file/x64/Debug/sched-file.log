@@ -1,9 +1,4 @@
-﻿  iosys_sched_system_init.c
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_init.c(11,56): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_init.c(29,65): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_init.c(51,24): warning C4047: 'function': 'ULONG_PTR' differs in levels of indirection from '__synapse_iosys_sched_system_io_session *'
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_init.c(51,10): warning C4024: 'CreateIoCompletionPort': different types for formal and actual parameter 3
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_init.c(52,16): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+﻿  default_context_request.c
   iosys_sched_system_request.c
 E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_request.c(12,36): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
 E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\sched\file\details\system_sched\iosys_sched_system_request.c(36,11): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data

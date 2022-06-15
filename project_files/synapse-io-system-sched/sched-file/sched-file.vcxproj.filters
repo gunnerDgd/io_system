@@ -43,6 +43,12 @@
     <Filter Include="Source Files\file\details\default_context">
       <UniqueIdentifier>{e90c3df6-732b-42e7-bcc4-b35276b5b2be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\file\default_context">
+      <UniqueIdentifier>{feb7214d-f053-4905-a5d4-40c1b593f653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file\default_context">
+      <UniqueIdentifier>{4675eec7-fa52-45f5-a20b-e3d579a0ae59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h">
@@ -75,6 +81,15 @@
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_request.h">
       <Filter>Header Files\file\details\default_context</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\default_context\default_context_type.h">
+      <Filter>Header Files\file\default_context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\default_context\default_context_init.h">
+      <Filter>Header Files\file\default_context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\default_context\default_context_request.h">
+      <Filter>Header Files\file\default_context</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c">
@@ -97,6 +112,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\sched\file\details\default_context\iosys_sched_context_request.c">
       <Filter>Source Files\file\details\default_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\default_context\default_context_init.c">
+      <Filter>Source Files\file\default_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\default_context\default_context_request.c">
+      <Filter>Source Files\file\default_context</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

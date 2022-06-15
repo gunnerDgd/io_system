@@ -28,6 +28,9 @@
     <Filter Include="Source Files\file\system_sched">
       <UniqueIdentifier>{02104951-4480-4d8a-bb57-fd791e0ff4ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\file\default_context">
+      <UniqueIdentifier>{9216a0c5-1db0-42c4-98b0-261a0c62ef52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\cpp\io_request.hpp">

@@ -56,7 +56,7 @@ void
 __synapse_iosys_sched_default_context_do_run
 	(__synapse_iosys_sched_default_context* pIoSched)
 {
-	while (!__synapse_iosys_sched_default_context_do_run_once(pIoSched));
+	while (__synapse_iosys_sched_default_context_do_run_once(pIoSched));
 }
 
 int
@@ -68,19 +68,19 @@ __synapse_iosys_sched_default_context_do_run_once
 	__synapse_iosys_sched_default_context_io_request* ptr_task;
 		
 	if (!ptr_task_node.opaque)
-		return -1;
+		return 0;
 
 	ptr_task
-		= synapse_structure_linear_queue_node_data(ptr_task_node);
+		= *(__synapse_iosys_sched_default_context_io_request**)
+				synapse_structure_linear_queue_node_data(ptr_task_node);
 
 	synapse_context_default_switch_to
 		(ptr_task->hnd_io_context.hnd_context_loop, ptr_task->hnd_io_context.hnd_context);
 
 	if (ptr_task->io_req_processed >= ptr_task->io_req_size)
 		synapse_structure_linear_queue_pop_front(
-			pIoSched->hnd_queue_processing,
-			ptr_task_node
+			pIoSched->hnd_queue_processing
 		);
 
-	return 0;
+	return 1;
 }
