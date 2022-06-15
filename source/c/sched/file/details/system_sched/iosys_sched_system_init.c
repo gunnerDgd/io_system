@@ -37,3 +37,28 @@ __synapse_iosys_sched_system_cleanup(__synapse_iosys_sched_system* pSched)
 	CloseHandle(pSched->hnd_sched);
 	free	   (pSched);
 }
+
+__synapse_iosys_sched_system_io_session*
+__synapse_iosys_sched_system_io_session_initialize
+	(__synapse_iosys_sched_system* pSched, __synapse_iosys_file_native* pNative)
+{
+	__synapse_iosys_sched_system_io_session* ptr_io_session
+		= malloc(sizeof(__synapse_iosys_sched_system_io_session));
+
+	pSched->hnd_sched
+		= CreateIoCompletionPort(pNative->hnd_file,
+								 pSched->hnd_sched,
+								 ptr_io_session,
+								 pSched->hnd_sched_thread);
+
+	ptr_io_session->hnd_sched	   = pSched;
+	ptr_io_session->hnd_sched_file = pNative;
+
+	return ptr_io_session;
+}
+
+void
+__synapse_iosys_sched_system_io_session_cleanup(__synapse_iosys_sched_system_io_session* pSession)
+{
+	free(pSession);
+}

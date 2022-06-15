@@ -1,0 +1,25 @@
+#pragma once
+#include <io_system/sched/file/system_sched/system_sched_type.h>
+#include <io_system/sched/file/details/system_sched/iosys_sched_system_request.h>
+
+#include <stdbool.h>
+
+synapse_iosys_sched_system_io_request
+synapse_iosys_sched_system_retrieve_completed(synapse_iosys_sched_system);
+
+synapse_iosys_sched_system_io_request
+synapse_iosys_sched_system_retrieve_completed_until(synapse_iosys_sched_system, uint32_t);
+
+void
+synapse_iosys_sched_system_dispatch_read
+	(synapse_iosys_sched_system_io_session, synapse_iosys_sched_system_io_request);
+
+void
+synapse_iosys_sched_system_dispatch_write
+	(synapse_iosys_sched_system_io_session, synapse_iosys_sched_system_io_request);
+
+bool
+synapse_iosys_sched_system_wait(synapse_iosys_sched_system_io_request);
+
+bool
+synapse_iosys_sched_system_wait_until(synapse_iosys_sched_system_io_request, uint32_t);

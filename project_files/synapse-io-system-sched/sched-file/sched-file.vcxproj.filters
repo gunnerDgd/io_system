@@ -31,6 +31,12 @@
     <Filter Include="Source Files\file\details\system_sched">
       <UniqueIdentifier>{1ba41315-8b92-4b59-a233-adf3d7c4ae17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\file\system_sched">
+      <UniqueIdentifier>{51057576-058a-4a3b-b667-f268fa53843b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file\system_sched">
+      <UniqueIdentifier>{ad9b4414-152d-46f0-97ab-211e881318f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h">
@@ -42,6 +48,15 @@
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_request.h">
       <Filter>Header Files\file\details\system_sched</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_type.h">
+      <Filter>Header Files\file\system_sched</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_init.h">
+      <Filter>Header Files\file\system_sched</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_request.h">
+      <Filter>Header Files\file\system_sched</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c">
@@ -49,6 +64,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_request.c">
       <Filter>Source Files\file\details\system_sched</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_init.c">
+      <Filter>Source Files\file\system_sched</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_request.c">
+      <Filter>Source Files\file\system_sched</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -12,6 +12,9 @@ io_system::file::native<>::native(std::wstring pName, __create_new)
 	  __M_iosys_file_native_offset
 		(0) {}
 
+typename io_system::file::native<>::native_handle_type
+		 io_system::file::native<>::native_handle() { return __M_iosys_file_native; }
+
 typename io_system::file::native<>::size_type
 		 io_system::file::native<>::read_from(pointer pRead, size_type pReadSize)
 {

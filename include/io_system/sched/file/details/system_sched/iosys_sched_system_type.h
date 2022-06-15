@@ -10,12 +10,16 @@ typedef struct __synapse_iosys_sched_system
 	size_t hnd_sched_thread;
 } __synapse_iosys_sched_system;
 
+typedef struct __synapse_iosys_sched_system_io_session
+{
+	__synapse_iosys_file_native  *hnd_sched_file;
+	__synapse_iosys_sched_system *hnd_sched;
+} __synapse_iosys_sched_system_io_session;
+
 typedef struct __synapse_iosys_sched_system_io_request
 {
-	OVERLAPPED					 hnd_sched_req ;
-	__synapse_iosys_file_native* hnd_sched_file;
-
-	void*						 req_io_buffer;
-	size_t						 req_io_size  ;
-	size_t						 req_io_result;
+	OVERLAPPED hnd_sched_req;
+	void*	   req_io_buffer;
+	size_t	   req_io_size  ;
+	size_t	   req_io_result;
 } __synapse_iosys_sched_system_io_request;

@@ -3,16 +3,17 @@
 
 __synapse_iosys_sched_system_io_request*
 __synapse_iosys_sched_system_io_request_initialize
-	(__synapse_iosys_file_native* pFile, size_t pIoSize, size_t pIoOffset)
+	(void* pIoPtr, size_t pIoSize, size_t pIoOffset)
 {
 	__synapse_iosys_sched_system_io_request* ptr_req
 		= malloc(sizeof(__synapse_iosys_sched_system_io_request));
 
-	ptr_req->hnd_sched_file			  = pFile;
 	ptr_req->hnd_sched_req.hEvent	  = CreateEvent(NULL, FALSE, FALSE, NULL);
-	
-	ptr_req->hnd_sched_req.Offset	  = pIoOffset;
+	ptr_req->hnd_sched_req.Offset	  = pIoOffset	   ;
 	ptr_req->hnd_sched_req.OffsetHigh = pIoOffset >> 32;
+
+	ptr_req->req_io_size			  = pIoSize;
+	ptr_req->req_io_buffer			  = pIoPtr ;
 
 	return ptr_req;
 }
@@ -25,31 +26,12 @@ __synapse_iosys_sched_system_io_request_cleanup
 	free	   (pIoReq);
 }
 
-bool
-__synapse_iosys_sched_system_io_request_poll
-	(__synapse_iosys_sched_system_io_request* pIoReq)
-{
-
-}
-
-void
-__synapse_iosys_sched_system_io_request_register
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_file_native* pFile)
-{
-	pSched->hnd_sched
-		= CreateIoCompletionPort(
-			pFile->hnd_file  ,
-			pSched->hnd_sched,
-			pFile			 ,
-			pSched->hnd_sched_thread);
-}
-
 void
 __synapse_iosys_sched_system_io_request_dispatch_read
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_sched_system_io_request* pIoReq)
+	(__synapse_iosys_sched_system_io_session* pSession, __synapse_iosys_sched_system_io_request* pIoReq)
 {
 	DWORD dummy;
-	ReadFile(pIoReq->hnd_sched_file->hnd_file,
+	ReadFile(pSession->hnd_sched_file->hnd_file,
 			 pIoReq->req_io_buffer,
 			 pIoReq->req_io_size  ,
 			 &dummy,
@@ -58,40 +40,57 @@ __synapse_iosys_sched_system_io_request_dispatch_read
 
 void
 __synapse_iosys_sched_system_io_request_dispatch_write
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_sched_system_io_request* pIoReq)
+	(__synapse_iosys_sched_system_io_session* pSession, __synapse_iosys_sched_system_io_request* pIoReq)
 {
 	DWORD dummy;
-	WriteFile(pIoReq->hnd_sched_file->hnd_file,
+	WriteFile(pSession->hnd_sched_file->hnd_file,
 			  pIoReq->req_io_buffer,
 			  pIoReq->req_io_size,
 			  &dummy,
 			   &pIoReq->hnd_sched_req);
 }
 
-void
-__synapse_iosys_sched_system_io_request_cancel
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_sched_system_io_request* pIoReq)
+__synapse_iosys_sched_system_io_request*
+__synapse_iosys_sched_system_io_request_retrive_completed
+	(__synapse_iosys_sched_system* pSched)
 {
-	CancelIo(pIoReq->hnd_sched_file);
+	return
+		__synapse_iosys_sched_system_io_request_retrieve_completed_until(pSched, INFINITE);
 }
 
-void
-__synapse_iosys_sched_system_io_request_wait
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_sched_system_io_request* pIoReq)
+__synapse_iosys_sched_system_io_request*
+__synapse_iosys_sched_system_io_request_retrieve_completed_until
+	(__synapse_iosys_sched_system* pSched, uint64_t pIoReqWaitTime)
 {
-	__synapse_iosys_sched_system_io_request_wait_until(pSched, pIoReq, INFINITE);
-}
-
-void
-__synapse_iosys_sched_system_io_request_wait_until
-	(__synapse_iosys_sched_system* pSched, __synapse_iosys_sched_system_io_request* pIoReq, uint64_t pIoReqWaitTime)
-{
-	LPOVERLAPPED ptr_hnd_ioreq  ;
-	DWORD		 sz_io_processed;
-
-	GetQueuedCompletionStatus(pSched->hnd_sched,
-							  &sz_io_processed,
-							  pIoReq,
-							  &ptr_hnd_ioreq,
+	__synapse_iosys_sched_system_io_request* ptr_hnd_io_request	  ;
+	LPOVERLAPPED							 ptr_hnd_io_overlapped;
+	DWORD									 sz_io_processed	  ;
+	
+	GetQueuedCompletionStatus(pSched->hnd_sched     ,
+							  &sz_io_processed      ,
+							  &ptr_hnd_io_request   ,
+							  &ptr_hnd_io_overlapped,
 							  pIoReqWaitTime);
+
+	ptr_hnd_io_request->req_io_result
+		= sz_io_processed;
+	return ptr_hnd_io_request;
+}
+
+bool
+__synapse_iosys_sched_system_io_request_wait
+	(__synapse_iosys_sched_system_io_request* pIoReq)
+{
+	return
+		__synapse_iosys_sched_system_io_request_wait_until(pIoReq, INFINITE);
+}
+
+bool
+__synapse_iosys_sched_system_io_request_wait_until
+	(__synapse_iosys_sched_system_io_request* pIoReq, uint32_t pIoWait)
+{
+	return
+		(WaitForSingleObject(pIoReq->hnd_sched_req.hEvent, pIoWait) == WAIT_OBJECT_0)
+			? true
+			: false;
 }

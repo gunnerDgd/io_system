@@ -19,24 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_request.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_request.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_type.h" />
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\cpp\io_request.hpp" />
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\cpp\io_sched.hpp" />
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\cpp\io_session.hpp" />
+    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\cpp\system_sched_declare.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c" />
-    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_request.c" />
-    <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_init.c" />
-    <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_request.c" />
+    <ClCompile Include="..\..\..\source\cpp\sched\file\system_sched\io_request.cpp" />
+    <ClCompile Include="..\..\..\source\cpp\sched\file\system_sched\io_sched.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bf0fb788-503a-4ecc-b955-61d9dfa787c8}</ProjectGuid>
-    <RootNamespace>schedfile</RootNamespace>
+    <ProjectGuid>{783dc074-0a10-4470-bf77-4e90617cc633}</ProjectGuid>
+    <RootNamespace>schedfilecpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,7 +126,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>

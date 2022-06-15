@@ -44,6 +44,9 @@ namespace io_system::file {
 		size_type
 			write_to (pointer, size_type, difference_type);
 
+		native_handle_type
+			native_handle();
+
 	private:
 		native_handle_type
 			__M_iosys_file_native;

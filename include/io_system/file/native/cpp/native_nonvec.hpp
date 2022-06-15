@@ -49,6 +49,9 @@ namespace io_system::file {
 		size_type
 			write_to (const_reference);
 
+		native_handle_type
+			native_handle();
+
 	private:
 		native_handle_type
 			__M_iosys_file_native;
@@ -56,6 +59,10 @@ namespace io_system::file {
 			__M_iosys_file_native_offset;
 	};
 }
+
+template <typename CharT>
+typename io_system::file::native<CharT>::native_handle_type
+		 io_system::file::native<CharT>::native_handle() { return __M_iosys_file_native; }
 
 template <typename CharT>
 io_system::file::native<CharT>::native(std::wstring pName, __open_existing)
