@@ -37,6 +37,12 @@
     <Filter Include="Source Files\file\system_sched">
       <UniqueIdentifier>{ad9b4414-152d-46f0-97ab-211e881318f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\file\details\default_context">
+      <UniqueIdentifier>{c6cef635-7e8d-48e0-a0a1-bfde698ea7cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file\details\default_context">
+      <UniqueIdentifier>{e90c3df6-732b-42e7-bcc4-b35276b5b2be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h">
@@ -57,6 +63,18 @@
     <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_request.h">
       <Filter>Header Files\file\system_sched</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_type.h">
+      <Filter>Header Files\file\details\default_context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_init.h">
+      <Filter>Header Files\file\details\default_context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_exec.h">
+      <Filter>Header Files\file\details\default_context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_request.h">
+      <Filter>Header Files\file\details\default_context</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c">
@@ -70,6 +88,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_request.c">
       <Filter>Source Files\file\system_sched</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\default_context\iosys_sched_context_init.c">
+      <Filter>Source Files\file\details\default_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\default_context\iosys_sched_context_exec.c">
+      <Filter>Source Files\file\details\default_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\default_context\iosys_sched_context_request.c">
+      <Filter>Source Files\file\details\default_context</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

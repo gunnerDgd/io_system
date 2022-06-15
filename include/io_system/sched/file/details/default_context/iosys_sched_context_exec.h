@@ -1,0 +1,18 @@
+#pragma once
+#include <io_system/sched/file/details/default_context/iosys_sched_context_type.h>
+
+void
+__synapse_iosys_sched_default_context_do_read
+	(synapse_context_default_entity, __synapse_iosys_sched_default_context_io_request*);
+
+void
+__synapse_iosys_sched_default_context_do_write
+	(synapse_context_default_entity, __synapse_iosys_sched_default_context_io_request*);
+
+void
+__synapse_iosys_sched_default_context_do_run
+	(__synapse_iosys_sched_default_context*);
+
+int
+__synapse_iosys_sched_default_context_do_run_once
+	(__synapse_iosys_sched_default_context*);
