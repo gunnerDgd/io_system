@@ -1,6 +1,6 @@
 #pragma once
 #include <io_system/sched/file/default_context/default_context_type.h>
-#include <io_system/file/file_io_system.h>
+#include <io_system/file/file_traits.h>
 
 synapse_iosys_sched_default_context
 synapse_iosys_sched_default_context_initialize();

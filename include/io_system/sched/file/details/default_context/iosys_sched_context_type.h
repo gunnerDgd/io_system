@@ -1,7 +1,7 @@
 #pragma once
 #include <context/all.h>
 #include <structure/queue/linear/linear_queue.h>
-#include <io_system/file/file_io_system.h>
+#include <io_system/file/file_traits.h>
 
 #include <stdbool.h>
 

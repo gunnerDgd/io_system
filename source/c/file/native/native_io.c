@@ -3,15 +3,15 @@
 #include <io_system/file/details/native/vectorized_io/iosys_file_native_vector_io.h>
 
 size_t
-synapse_iosys_file_native_read_from(synapse_io_system_file_handle pEntity, void* pReadBuffer, size_t pReadSize, size_t pReadOffset)
+synapse_iosys_file_native_read_from(synapse_io_system_file_handle pEntity, void* pReadBuffer, size_t pReadSize)
 {
-	return __synapse_iosys_file_native_read_from(pEntity.opaque, pReadBuffer, pReadSize, pReadOffset);
+	return __synapse_iosys_file_native_read_from(pEntity.opaque, pReadBuffer, pReadSize);
 }
 
 size_t
-synapse_iosys_file_native_write_to(synapse_io_system_file_handle pEntity, void* pWriteBuffer, size_t pWriteSize, size_t pWriteOffset)
+synapse_iosys_file_native_write_to(synapse_io_system_file_handle pEntity, void* pWriteBuffer, size_t pWriteSize)
 {
-	return __synapse_iosys_file_native_write_to (pEntity.opaque, pWriteBuffer, pWriteSize, pWriteOffset);
+	return __synapse_iosys_file_native_write_to (pEntity.opaque, pWriteBuffer, pWriteSize);
 }
 
 size_t

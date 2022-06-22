@@ -42,6 +42,9 @@
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_io_vector.hpp">
       <Filter>Header Files\native\cpp</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\native.hpp">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\cpp\file\native\native_nonvec_raw.cpp">

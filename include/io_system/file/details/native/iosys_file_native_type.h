@@ -4,9 +4,7 @@
 
 typedef struct __synapse_iosys_file_native
 {
-	HANDLE     hnd_file		;
-	OVERLAPPED hnd_aio		;
-	bool	   hnd_aio_ready;
+	HANDLE     hnd_file;
 } __synapse_iosys_file_native;
 
 typedef struct __synapse_iosys_file_native_vector

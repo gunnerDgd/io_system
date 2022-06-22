@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "synapse-iosys-interface", "synapse-iosys-interface\synapse-iosys-interface.vcxproj", "{21078D9D-FD48-4863-B9EA-C5839EE73BFE}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "synapse-iosys-file", "synapse-iosys-file\synapse-iosys-file.vcxproj", "{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "synapse-iosys-debug", "synapse-iosys-debug\synapse-iosys-debug.vcxproj", "{41F55DF2-3690-4C5B-8420-C952F9827B4F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "synapse-iosys-file-executor", "synapse-iosys-file-executor\synapse-iosys-file-executor.vcxproj", "{4A429A2F-EC31-42CC-8311-C19857A90571}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "synapse-iosys-file-cpp", "synapse-iosys-file-cpp\synapse-iosys-file-cpp.vcxproj", "{FF66D481-E2D9-4248-88C5-FBA17BB73B6A}"
 EndProject
@@ -21,14 +15,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Debug|x64.ActiveCfg = Debug|x64
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Debug|x64.Build.0 = Debug|x64
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Debug|x86.ActiveCfg = Debug|Win32
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Debug|x86.Build.0 = Debug|Win32
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Release|x64.ActiveCfg = Release|x64
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Release|x64.Build.0 = Release|x64
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Release|x86.ActiveCfg = Release|Win32
-		{21078D9D-FD48-4863-B9EA-C5839EE73BFE}.Release|x86.Build.0 = Release|Win32
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Debug|x64.ActiveCfg = Debug|x64
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Debug|x64.Build.0 = Debug|x64
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Debug|x86.ActiveCfg = Debug|Win32
@@ -37,22 +23,6 @@ Global
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Release|x64.Build.0 = Release|x64
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Release|x86.ActiveCfg = Release|Win32
 		{EB9AF445-B3E8-4F41-90D8-CC3B6B9B6C60}.Release|x86.Build.0 = Release|Win32
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Debug|x64.ActiveCfg = Debug|x64
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Debug|x64.Build.0 = Debug|x64
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Debug|x86.ActiveCfg = Debug|Win32
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Debug|x86.Build.0 = Debug|Win32
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Release|x64.ActiveCfg = Release|x64
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Release|x64.Build.0 = Release|x64
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Release|x86.ActiveCfg = Release|Win32
-		{41F55DF2-3690-4C5B-8420-C952F9827B4F}.Release|x86.Build.0 = Release|Win32
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Debug|x64.ActiveCfg = Debug|x64
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Debug|x64.Build.0 = Debug|x64
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Debug|x86.ActiveCfg = Debug|Win32
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Debug|x86.Build.0 = Debug|Win32
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Release|x64.ActiveCfg = Release|x64
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Release|x64.Build.0 = Release|x64
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Release|x86.ActiveCfg = Release|Win32
-		{4A429A2F-EC31-42CC-8311-C19857A90571}.Release|x86.Build.0 = Release|Win32
 		{FF66D481-E2D9-4248-88C5-FBA17BB73B6A}.Debug|x64.ActiveCfg = Debug|x64
 		{FF66D481-E2D9-4248-88C5-FBA17BB73B6A}.Debug|x64.Build.0 = Debug|x64
 		{FF66D481-E2D9-4248-88C5-FBA17BB73B6A}.Debug|x86.ActiveCfg = Debug|Win32

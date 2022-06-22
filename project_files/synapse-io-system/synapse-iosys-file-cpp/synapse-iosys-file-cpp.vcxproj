@@ -25,6 +25,7 @@
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_nonvec_raw.hpp" />
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_openmode.hpp" />
     <ClInclude Include="..\..\..\include\io_system\file\native\cpp\native_vectorized.hpp" />
+    <ClInclude Include="..\..\..\include\io_system\file\native\native.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\cpp\file\native\native_io_vector.cpp" />

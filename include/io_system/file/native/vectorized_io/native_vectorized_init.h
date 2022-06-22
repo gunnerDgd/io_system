@@ -1,5 +1,5 @@
 #pragma once
-#include <io_system/file/file_io_system.h>
+#include <io_system/file/file_vectorized_traits.h>
 
 synapse_io_system_file_vector*
 synapse_io_system_file_vector_initialize(size_t);

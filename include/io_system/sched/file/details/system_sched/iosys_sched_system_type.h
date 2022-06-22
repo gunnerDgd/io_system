@@ -2,7 +2,8 @@
 #include <stdint.h>
 #include <Windows.h>
 
-#include <io_system/file/details/native/iosys_file_native.h>
+#include <io_system/file/file_traits.h>
+#include <io_system/file/file_aio_traits.h>
 
 typedef struct __synapse_iosys_sched_system
 {
@@ -12,7 +13,7 @@ typedef struct __synapse_iosys_sched_system
 
 typedef struct __synapse_iosys_sched_system_io_session
 {
-	__synapse_iosys_file_native  *hnd_sched_file;
+	synapse_io_system_file_aio	 *hnd_sched_file;
 	__synapse_iosys_sched_system *hnd_sched;
 } __synapse_iosys_sched_system_io_session;
 

@@ -1,0 +1,15 @@
+#pragma once
+#include <io_system/file/native/async_io/aio_type.h>
+#include <io_system/file/file_handle_type.h>
+
+synapse_io_system_file_aio_request
+synapse_io_system_file_aio_read_from
+	(synapse_io_system_file_handle, synapse_io_system_file_aio_request);
+
+synapse_io_system_file_aio_request
+synapse_io_system_file_aio_write_to
+	(synapse_io_system_file_handle, synapse_io_system_file_aio_request);
+
+size_t
+synapse_io_system_file_aio_wait_until
+	(synapse_io_system_file_handle, synapse_io_system_file_aio_request);
