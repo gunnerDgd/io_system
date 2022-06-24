@@ -26,12 +26,6 @@
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_init.h" />
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_request.h" />
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_type.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_request.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_request.h" />
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\c\sched\file\default_context\default_context_init.c" />
@@ -41,6 +35,8 @@
     <ClCompile Include="..\..\..\source\c\sched\file\details\default_context\iosys_sched_context_request.c" />
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_init.c" />
     <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\iosys_sched_system_request.c" />
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\io_request\iosys_sched_system_ioreq_init.c" />
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\io_request\iosys_sched_system_ioreq_manip.c" />
     <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_init.c" />
     <ClCompile Include="..\..\..\source\c\sched\file\system_sched\system_sched_request.c" />
   </ItemGroup>

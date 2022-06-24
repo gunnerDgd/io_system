@@ -1,0 +1,12 @@
+﻿  iosys_file_native_vectorized_io.c
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vectorized_io.c(11,39): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vectorized_io.c(26,39): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+  iosys_file_native_vector_init.c
+  iosys_file_native_vector_manip.c
+  iosys_file_native_vectorized_init.c
+  native_vectorized_init.c
+  native_vectorized_io.c
+  native_vectorized_vector_init.c
+  native_vectorized_vector_manip.c
+  Generating Code...
+  synapse-iosys-file-vectorized.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\iosys-file\native\synapse-iosys-file-vectorized.lib

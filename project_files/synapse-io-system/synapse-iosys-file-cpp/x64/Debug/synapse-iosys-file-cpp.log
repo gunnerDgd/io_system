@@ -1,5 +1,88 @@
 ﻿  native_io_vector.cpp
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_io_vector.cpp(50,21): error C2039: 'vector_count': is not a member of 'synapse_io_system_file_vector'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\file_vectorized_traits.h(4): message : see declaration of 'synapse_io_system_file_vector'
   native_nonvec_raw.cpp
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4,23): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(5,70): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,23): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,1): error C2086: 'int synapse_io_system_file': redefinition
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4): message : see declaration of 'synapse_io_system_file'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(8,68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10,34): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(11,71): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,34): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,1): error C2086: 'int synapse_io_system_file_vectorized': redefinition
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10): message : see declaration of 'synapse_io_system_file_vectorized'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(14,71): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(17,1): error C2182: 'synapse_iosys_file_native_cleanup': this use of 'void' is not valid
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(17,60): error C2059: syntax error: ')'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(20,1): error C2182: 'synapse_iosys_file_vectorized_cleanup': this use of 'void' is not valid
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(20,73): error C2059: syntax error: ')'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\file_traits.h(16,25): error C2378: 'synapse_io_system_file': redefinition; symbol cannot be overloaded with a typedef
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4): message : see declaration of 'synapse_io_system_file'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\file_vectorized_traits.h(28,36): error C2378: 'synapse_io_system_file_vectorized': redefinition; symbol cannot be overloaded with a typedef
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10): message : see declaration of 'synapse_io_system_file_vectorized'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(18,30): error C2061: syntax error: identifier 'synapse_io_system_file'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(48,4): error C3646: 'native_handle': unknown override specifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(48,17): error C2059: syntax error: '('
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(48,1): error C2238: unexpected token(s) preceding ';'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(52,4): error C3646: '__M_iosys_file_native': unknown override specifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(52,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(4,4): error C2614: 'io_system::file::native<void>': illegal member initialization: '__M_iosys_file_native' is not a base or member
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(10,4): error C2614: 'io_system::file::native<void>': illegal member initialization: '__M_iosys_file_native' is not a base or member
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(15,37): error C2039: 'native_handle_type': is not a member of 'io_system::file::native<void>'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(16): message : see declaration of 'io_system::file::native<void>'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(16,31): error C2039: 'native_handle': is not a member of 'io_system::file::native<void>'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_nonvec_raw.hpp(16): message : see declaration of 'io_system::file::native<void>'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(16,44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(16,44): error C2146: syntax error: missing ';' before identifier 'native_handle'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(16,47): error C2143: syntax error: missing ';' before '{'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(16,47): error C2447: '{': missing function header (old-style formal list?)
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(21,5): warning C4002: too many arguments for function-like macro invocation 'synapse_io_system_file_read_from'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(21,5): error C2065: '__M_iosys_file_native': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(32,3): warning C4002: too many arguments for function-like macro invocation 'synapse_io_system_file_read_from'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(32,3): error C2065: '__M_iosys_file_native': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(38,5): warning C4002: too many arguments for function-like macro invocation 'synapse_io_system_file_write_to'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(38,5): error C2065: '__M_iosys_file_native': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(49,3): warning C4002: too many arguments for function-like macro invocation 'synapse_io_system_file_write_to'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_nonvec_raw.cpp(49,3): error C2065: '__M_iosys_file_native': undeclared identifier
   native_vectorized.cpp
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4,23): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(5,70): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,23): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(7,1): error C2086: 'int synapse_io_system_file': redefinition
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4): message : see declaration of 'synapse_io_system_file'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(8,68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10,34): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(11,71): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,34): error C2143: syntax error: missing ';' before '*'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(13,1): error C2086: 'int synapse_io_system_file_vectorized': redefinition
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10): message : see declaration of 'synapse_io_system_file_vectorized'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(14,71): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(17,1): error C2182: 'synapse_iosys_file_native_cleanup': this use of 'void' is not valid
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(17,60): error C2059: syntax error: ')'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(20,1): error C2182: 'synapse_iosys_file_vectorized_cleanup': this use of 'void' is not valid
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(20,73): error C2059: syntax error: ')'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\file_traits.h(16,25): error C2378: 'synapse_io_system_file': redefinition; symbol cannot be overloaded with a typedef
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(4): message : see declaration of 'synapse_io_system_file'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\file_vectorized_traits.h(28,36): error C2378: 'synapse_io_system_file_vectorized': redefinition; symbol cannot be overloaded with a typedef
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\native_init.h(10): message : see declaration of 'synapse_io_system_file_vectorized'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_vectorized.hpp(19,6): error C2061: syntax error: identifier 'synapse_io_system_file_vectorized'
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_vectorized.hpp(46,4): error C3646: '__M_iosys_file_vectorized': unknown override specifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\include\io_system\file\native\cpp\native_vectorized.hpp(46,29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(4,4): error C2614: 'io_system::file::native_vectorized': illegal member initialization: '__M_iosys_file_vectorized' is not a base or member
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(10,4): error C2614: 'io_system::file::native_vectorized': illegal member initialization: '__M_iosys_file_vectorized' is not a base or member
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(17,40): error C2065: '__M_iosys_file_vectorized': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(23,1): error C2065: '__M_iosys_file_vectorized': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(38,1): error C2065: '__M_iosys_file_vectorized': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(48,1): error C2065: '__M_iosys_file_vectorized': undeclared identifier
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\cpp\file\native\native_vectorized.cpp(62,1): error C2065: '__M_iosys_file_vectorized': undeclared identifier
   Generating Code...
-  synapse-iosys-file-cpp.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-file-cpp.lib

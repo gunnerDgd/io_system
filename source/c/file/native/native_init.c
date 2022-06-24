@@ -3,74 +3,34 @@
 
 #include <stdlib.h>
 
-synapse_io_system_file*
-synapse_iosys_file_native_initialize_open_existing(const wchar_t* pName)
+synapse_io_system_file_handle
+synapse_iosys_file_native_initialize_open_existing
+	(const wchar_t* pName)
 {
-	synapse_io_system_file* ptr_iosys_base					 = malloc(sizeof(synapse_io_system_file));
-							ptr_iosys_base->handle.opaque    = __synapse_iosys_file_native_initialize_open_existing(pName);
-						
-							ptr_iosys_base->read_from		 = &synapse_iosys_file_native_read_from		 ;
-							ptr_iosys_base->write_to		 = &synapse_iosys_file_native_write_to		 ;
+	synapse_io_system_opaque_init
+		(synapse_io_system_file_handle,
+		 ptr_fhnd,
+		 __synapse_iosys_file_native_initialize_open_existing(pName));
 
-							ptr_iosys_base->current_pointer  = &synapse_iosys_file_native_pointer_current;
-							ptr_iosys_base->move_pointer     = &synapse_iosys_file_native_pointer_set    ;
-							ptr_iosys_base->wait_until		 = &synapse_iosys_file_native_wait_until	 ;
-
-	return ptr_iosys_base;
+	return ptr_fhnd;
 }
 
-synapse_io_system_file*
-synapse_iosys_file_native_initialize_create_new(const wchar_t* pName)
+synapse_io_system_file_handle
+synapse_iosys_file_native_initialize_create_new
+	(const wchar_t* pName)
 {
-	synapse_io_system_file* ptr_iosys_base					 = malloc(sizeof(synapse_io_system_file));
-							ptr_iosys_base->handle.opaque	 = __synapse_iosys_file_native_initialize_create_new(pName);
-						
-							ptr_iosys_base->read_from		 = &synapse_iosys_file_native_read_from		 ;
-							ptr_iosys_base->write_to		 = &synapse_iosys_file_native_write_to		 ;
+	synapse_io_system_opaque_init
+		(synapse_io_system_file_handle,
+		 ptr_fhnd,
+		 __synapse_iosys_file_native_initialize_create_new(pName));
 
-							ptr_iosys_base->current_pointer  = &synapse_iosys_file_native_pointer_current;
-							ptr_iosys_base->move_pointer     = &synapse_iosys_file_native_pointer_set    ;
-							ptr_iosys_base->wait_until		 = &synapse_iosys_file_native_wait_until	 ;
-
-	return ptr_iosys_base;
-}
-
-synapse_io_system_file_vectorized*
-synapse_iosys_file_vectorized_initialize_open_existing(const wchar_t* pName)
-{
-	synapse_io_system_file_vectorized* ptr_iosys_base					= malloc(sizeof(synapse_io_system_file));
-									   ptr_iosys_base->handle.opaque    = __synapse_iosys_file_vectorized_initialize_open_existing(pName);
-						
-									   ptr_iosys_base->vector_read_from = &synapse_iosys_file_native_read_from_vector;
-									   ptr_iosys_base->vector_write_to  = &synapse_iosys_file_native_write_to_vector ;
-									   ptr_iosys_base->wait_until		= &synapse_iosys_file_native_wait_until	     ;
-
-	return ptr_iosys_base;
-}
-
-synapse_io_system_file_vectorized*
-synapse_iosys_file_vectorized_initialize_create_new(const wchar_t* pName)
-{
-	synapse_io_system_file_vectorized* ptr_iosys_base					= malloc(sizeof(synapse_io_system_file));
-									   ptr_iosys_base->handle.opaque    = __synapse_iosys_file_vectorized_initialize_create_new(pName);
-						
-									   ptr_iosys_base->vector_read_from = &synapse_iosys_file_native_read_from_vector;
-									   ptr_iosys_base->vector_write_to  = &synapse_iosys_file_native_write_to_vector ;
-									   ptr_iosys_base->wait_until		= &synapse_iosys_file_native_wait_until	     ;
-
-	return ptr_iosys_base;
+	return ptr_fhnd;
 }
 
 void
-synapse_iosys_file_native_cleanup(synapse_io_system_file* pIoBase)
+synapse_iosys_file_native_cleanup
+	(synapse_io_system_file_handle pFileHandle)
 {
-	__synapse_iosys_file_native_cleanup(pIoBase->handle.opaque);
-	free(pIoBase);
-}
-
-void
-synapse_iosys_file_vectorized_cleanup(synapse_io_system_file_vectorized* pIoBase)
-{
-	__synapse_iosys_file_native_cleanup(pIoBase->handle.opaque);
-	free(pIoBase);
+	__synapse_iosys_file_native_cleanup
+		(synapse_io_system_opaque_reference(pFileHandle));
 }

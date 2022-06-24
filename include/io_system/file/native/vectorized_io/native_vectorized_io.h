@@ -1,3 +1,19 @@
 #pragma once
-#include <io_system/file/native/vectorized_io/native_vectorized_init.h>
-#include <io_system/file/native/vectorized_io/native_vectorized_manip.h>
+#include <io_system/file/file_vectorized_traits.h>
+#include <stdint.h>
+
+size_t
+synapse_io_system_file_vectorized_read_from
+	(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vectorized_request);
+
+size_t
+synapse_io_system_file_vectorized_write_to
+	(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vectorized_request);
+
+size_t
+synapse_io_system_file_vectorized_wait_until
+	(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vectorized_request);
+
+size_t
+synapse_io_system_file_vectorized_poll
+	(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vectorized_request);

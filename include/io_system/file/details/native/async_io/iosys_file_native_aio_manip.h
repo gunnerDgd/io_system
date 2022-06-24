@@ -12,3 +12,7 @@ __synapse_io_system_file_aio_write_to
 size_t
 __synapse_io_systesm_file_aio_wait_until
 	(__synapse_io_system_file_aio*, __synapse_io_system_file_aio_request*);
+
+size_t
+__synapse_io_system_file_aio_poll
+	(__synapse_io_system_file_aio*, __synapse_io_system_file_aio_request*);

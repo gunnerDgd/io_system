@@ -1,9 +1,20 @@
 #pragma once
-#include <io_system/file/file_handle_type.h>
+#include <stdint.h>
+#include <io_system/defines/opaque/opaque.h>
+
+synapse_io_system_opaque_define
+	(synapse_io_system_file_vectorized_handle)
+
+synapse_io_system_opaque_define
+	(synapse_io_system_file_vectorized_request)
+
+synapse_io_system_opaque_define
+	(synapse_io_system_file_vector_handle)
 
 typedef struct synapse_io_system_file_vector
 {
-	synapse_io_system_file_vector_handle handle;
+	synapse_io_system_file_vector_handle 
+		handle;
 
 	void*
 		(*push)    (synapse_io_system_file_vector_handle, size_t);
@@ -15,12 +26,18 @@ typedef struct synapse_io_system_file_vector
 		(*retrieve)(synapse_io_system_file_vector_handle, size_t);
 } synapse_io_system_file_vector;
 
-typedef struct synapse_io_system_file_vectorized
+typedef struct synapse_io_system_file_vectorized_traits
 {
-	synapse_io_system_file_handle handle;
+	synapse_io_system_file_vectorized_handle
+		handle;
 
-	size_t(*vector_read_from)(synapse_io_system_file_handle, synapse_io_system_file_vector*, size_t);
-	size_t(*vector_write_to) (synapse_io_system_file_handle, synapse_io_system_file_vector*, size_t);
-
-	void  (*wait_until)		 (synapse_io_system_file_handle);
-} synapse_io_system_file_vectorized;
+	synapse_io_system_file_vectorized_request
+		(*vector_read_from)
+			(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vector*, size_t);
+	synapse_io_system_file_vectorized_request
+		(*vector_write_to)
+			(synapse_io_system_file_vectorized_handle, synapse_io_system_file_vector*, size_t);
+	void  
+		(*wait_until)
+			(synapse_io_system_file_vectorized_handle);
+} synapse_io_system_file_vectorized_traits;

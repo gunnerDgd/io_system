@@ -1,0 +1,8 @@
+﻿  aio_init.c
+  aio_manip.c
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\native\async_io\aio_manip.c(6,78): warning C4028: formal parameter 2 different from declaration
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\native\async_io\aio_manip.c(7,1): warning C4029: declared formal parameter list different from definition
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\native\async_io\aio_manip.c(17,78): warning C4028: formal parameter 2 different from declaration
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\native\async_io\aio_manip.c(18,1): warning C4029: declared formal parameter list different from definition
+  Generating Code...
+  synapse-iosys-file-aio.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\iosys-file\native\synapse-iosys-file-aio.lib

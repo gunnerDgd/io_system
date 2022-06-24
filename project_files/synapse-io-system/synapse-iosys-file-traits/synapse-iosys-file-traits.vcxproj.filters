@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\file">
+      <UniqueIdentifier>{6aefe392-8b61-4054-95a3-1af19ac3b5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\defines">
+      <UniqueIdentifier>{98a78db2-afe6-4bf7-8a7a-48a02d0357e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\defines\opaque">
+      <UniqueIdentifier>{2f9f23a7-5a9e-4b3d-b5a3-f6f4851a5793}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\file\file_vectorized_traits.h">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\file_traits.h">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\file_aio_traits.h">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\defines\opaque\opaque.h">
+      <Filter>Header Files\defines\opaque</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

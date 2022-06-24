@@ -1,20 +1,10 @@
 ﻿  iosys_file_native_init.c
-  iosys_file_native_io.c
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(12,32): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(16,46): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(27,29): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(31,48): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
   iosys_file_native_manip.c
-  iosys_file_native_vector_init.c
-  iosys_file_native_vector_io.c
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vector_io.c(9,28): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vector_io.c(14,41): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vector_io.c(29,28): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
-E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\vectorized_io\iosys_file_native_vector_io.c(34,38): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+  iosys_file_native_io.c
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(14,46): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+E:\Programming\C++\Projects\Experimental\synapse-io-system\source\c\file\details\native\iosys_file_native_io.c(27,48): warning C4267: 'function': conversion from 'size_t' to 'DWORD', possible loss of data
+  native_manip.c
   native_init.c
   native_io.c
-  native_manip.c
-  native_vectorized_init.c
-  native_vectorized_manip.c
   Generating Code...
-  synapse-iosys-file.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\synapse-iosys-file.lib
+  synapse-iosys-file.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\iosys-file\native\synapse-iosys-file.lib

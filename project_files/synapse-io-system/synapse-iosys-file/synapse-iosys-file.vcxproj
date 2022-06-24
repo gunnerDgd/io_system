@@ -22,14 +22,9 @@
     <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_init.c" />
     <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_manip.c" />
     <ClCompile Include="..\..\..\source\c\file\details\native\iosys_file_native_io.c" />
-    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_init.c" />
-    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_io.c" />
-    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vector_manip.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native_manip.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native_init.c" />
     <ClCompile Include="..\..\..\source\c\file\native\native_io.c" />
-    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_init.c" />
-    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_manip.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_manip.h" />
@@ -37,17 +32,10 @@
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_init.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_io.h" />
     <ClInclude Include="..\..\..\include\io_system\file\details\native\iosys_file_native_type.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_io.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vector_manip.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\file_io_system.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_init.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_io.h" />
     <ClInclude Include="..\..\..\include\io_system\file\native\native_manip.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_init.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_io.h" />
-    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_manip.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -102,8 +90,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-io-system\include;$(IncludePath)</IncludePath>
-    <OutDir>E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\</OutDir>
+    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-io-system\include</IncludePath>
+    <OutDir>E:\Programming\C++\Projects\Experimental\synapse-io-system\libs\x64\debug\iosys-file\native\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

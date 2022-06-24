@@ -41,3 +41,14 @@ __synapse_io_systesm_file_aio_wait_until
 	return
 		res_aio_sz;
 }
+
+size_t
+__synapse_io_system_file_aio_poll
+	(__synapse_io_system_file_aio* pAioHnd, __synapse_io_system_file_aio_request* pAioReq)
+{
+	DWORD res_aio = 0;
+	GetOverlappedResult
+		(pAioHnd->aio_hnd, &pAioReq->aio_syshnd, &res_aio, FALSE);
+
+	return res_aio;
+}

@@ -19,9 +19,6 @@
     <Filter Include="Header Files\file\details">
       <UniqueIdentifier>{98c73304-8dd0-4572-b108-7a705d0c9aa2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\file\details\system_sched">
-      <UniqueIdentifier>{2c63b194-a5ea-4e7a-97b6-799bf9780e31}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\file">
       <UniqueIdentifier>{905bcfe3-0c4e-4749-a614-5f2ad98ebc5e}</UniqueIdentifier>
     </Filter>
@@ -30,9 +27,6 @@
     </Filter>
     <Filter Include="Source Files\file\details\system_sched">
       <UniqueIdentifier>{1ba41315-8b92-4b59-a233-adf3d7c4ae17}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\file\system_sched">
-      <UniqueIdentifier>{51057576-058a-4a3b-b667-f268fa53843b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\file\system_sched">
       <UniqueIdentifier>{ad9b4414-152d-46f0-97ab-211e881318f3}</UniqueIdentifier>
@@ -49,26 +43,11 @@
     <Filter Include="Source Files\file\default_context">
       <UniqueIdentifier>{4675eec7-fa52-45f5-a20b-e3d579a0ae59}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\file\details\system_sched\io_request">
+      <UniqueIdentifier>{a97e10b9-ab11-4b43-8cea-96380cf5fcaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_type.h">
-      <Filter>Header Files\file\details\system_sched</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_init.h">
-      <Filter>Header Files\file\details\system_sched</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\details\system_sched\iosys_sched_system_request.h">
-      <Filter>Header Files\file\details\system_sched</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_type.h">
-      <Filter>Header Files\file\system_sched</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_init.h">
-      <Filter>Header Files\file\system_sched</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\io_system\sched\file\system_sched\system_sched_request.h">
-      <Filter>Header Files\file\system_sched</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\io_system\sched\file\details\default_context\iosys_sched_context_type.h">
       <Filter>Header Files\file\details\default_context</Filter>
     </ClInclude>
@@ -118,6 +97,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\c\sched\file\default_context\default_context_request.c">
       <Filter>Source Files\file\default_context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\io_request\iosys_sched_system_ioreq_init.c">
+      <Filter>Source Files\file\details\system_sched\io_request</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\sched\file\details\system_sched\io_request\iosys_sched_system_ioreq_manip.c">
+      <Filter>Source Files\file\details\system_sched\io_request</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

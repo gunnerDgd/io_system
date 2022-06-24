@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\details">
+      <UniqueIdentifier>{62e948cf-d1cc-495e-9a59-5848fc70bb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native">
+      <UniqueIdentifier>{b827db03-2c2f-4e83-809a-cf8e425c041b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native\async_io">
+      <UniqueIdentifier>{905c8835-6b45-490b-96f0-c617c38988f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native">
+      <UniqueIdentifier>{86fcd2e2-1051-4383-a690-8360b1e47d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native\async_io">
+      <UniqueIdentifier>{1eb1cd54-acec-417c-8215-dfc7d1d627b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details">
+      <UniqueIdentifier>{df25934d-c372-4a2b-a3b9-a33000405f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native">
+      <UniqueIdentifier>{8c178803-3cc0-4881-829d-45a618439b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native">
+      <UniqueIdentifier>{44fcee52-5ca1-4570-8f39-8940a6dbb644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native\async_io">
+      <UniqueIdentifier>{e98ad813-68cb-49c6-aad9-ae92358e1c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native\async_io">
+      <UniqueIdentifier>{8270b230-c290-4bf5-a860-3c3ddf63b8a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\async_io\iosys_file_native_aio_init.h">
+      <Filter>Header Files\details\native\async_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\async_io\iosys_file_native_aio_manip.h">
+      <Filter>Header Files\details\native\async_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\async_io\iosys_file_native_aio_type.h">
+      <Filter>Header Files\details\native\async_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\async_io\aio_init.h">
+      <Filter>Header Files\native\async_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\async_io\aio_manip.h">
+      <Filter>Header Files\native\async_io</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\file\details\native\async_io\iosys_file_native_aio_init.c">
+      <Filter>Source Files\details\native\async_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\async_io\iosys_file_native_aio_manip.c">
+      <Filter>Source Files\details\native\async_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\async_io\aio_init.c">
+      <Filter>Source Files\native\async_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\async_io\aio_manip.c">
+      <Filter>Source Files\native\async_io</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

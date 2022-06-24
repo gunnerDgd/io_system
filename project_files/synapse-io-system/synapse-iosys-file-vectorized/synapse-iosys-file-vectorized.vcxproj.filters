@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\details">
+      <UniqueIdentifier>{e6fb4447-775a-4896-85d2-b152c144b5c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native">
+      <UniqueIdentifier>{f982c4fb-8b25-4c92-b1a9-e60471d51a4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native\vectorized_io">
+      <UniqueIdentifier>{4236ce36-973f-45c4-932a-dce15745f28d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native">
+      <UniqueIdentifier>{a3ae2a89-2711-4360-829d-d92f97d8761e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native\vectorized_io">
+      <UniqueIdentifier>{9b882259-6821-4497-a9a3-9ff0ce422ebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details">
+      <UniqueIdentifier>{ae676c8d-177f-48ac-bfef-7175d56ecc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native">
+      <UniqueIdentifier>{4ac3ad30-8b68-4619-bc9d-5a8f751edb4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native\vectorized_io">
+      <UniqueIdentifier>{d6bfbc5e-ea87-4423-8522-8e00356c1c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native">
+      <UniqueIdentifier>{ac129f28-756f-481d-8ca3-ecfe0d1aead4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native\vectorized_io">
+      <UniqueIdentifier>{d2efac43-0c78-449a-9cf6-89a97c90676a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\native\vectorized_io\vector">
+      <UniqueIdentifier>{9bff4f7a-150f-47a6-979c-debc6230c838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\native\vectorized_io\vector">
+      <UniqueIdentifier>{260122dd-981a-4a84-8d04-7b1b0320d3d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native\vectorized_io\vector">
+      <UniqueIdentifier>{2c8a8536-8c13-415a-a3bd-877f324ac21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\native\vectorized_io\vector">
+      <UniqueIdentifier>{ec247145-09bf-4183-9f46-caa8d0314d58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\iosys_file_native_vectorized_io.c">
+      <Filter>Source Files\details\native\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\vector\iosys_file_native_vector_init.c">
+      <Filter>Source Files\details\native\vectorized_io\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\details\native\vectorized_io\vector\iosys_file_native_vector_manip.c">
+      <Filter>Source Files\details\native\vectorized_io\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\vector\native_vectorized_vector_init.c">
+      <Filter>Source Files\native\vectorized_io\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\vector\native_vectorized_vector_manip.c">
+      <Filter>Source Files\native\vectorized_io\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_init.c">
+      <Filter>Source Files\native\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\native_vectorized_io.c">
+      <Filter>Source Files\native\vectorized_io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\c\file\native\vectorized_io\iosys_file_native_vectorized_init.c">
+      <Filter>Source Files\details\native\vectorized_io</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vectorized_io.h">
+      <Filter>Header Files\details\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_init.h">
+      <Filter>Header Files\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vectorized_type.h">
+      <Filter>Header Files\details\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\vector\iosys_file_native_vector_init.h">
+      <Filter>Header Files\details\native\vectorized_io\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\vector\iosys_file_native_vector_manip.h">
+      <Filter>Header Files\details\native\vectorized_io\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\vector\native_vectorized_vector_init.h">
+      <Filter>Header Files\native\vectorized_io\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\vector\native_vectorized_vector_manip.h">
+      <Filter>Header Files\native\vectorized_io\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\native\vectorized_io\native_vectorized_io.h">
+      <Filter>Header Files\native\vectorized_io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\io_system\file\details\native\vectorized_io\iosys_file_native_vectorized_init.h">
+      <Filter>Header Files\details\native\vectorized_io</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
